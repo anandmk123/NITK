@@ -1,14 +1,55 @@
 #include <stdio.h>
 #include <time.h>
 
-int BubbleSortFunction()
+void CountSort(int arr[], int n, int pos)
 {
+
+    int count[10] = {0};
+    int output[n], i;
+
+    for (i = 0; i < n; i++)
+        count[(arr[i] / pos) % 10]++;
+
+    for (i = 1; i < 10; i++)
+        count[i] = count[i] + count[i - 1];
+    for (i = n - 1; i >= 0; i--)
+    {
+        output[count[(arr[i] / pos) % 10] - 1] = arr[i];
+        count[(arr[i] / pos) % 10]--;
+    }
+
+    for (i = 0; i < n; i++)
+        arr[i] = output[i];
+}
+
+void RadixSortFunction(int arr[], int n)
+{
+
+    int i, j;
+
+    int maximum = arr[0];
+    for (i = 1; i < n; i++)
+    {
+        if (arr[i] > maximum)
+            maximum = arr[i];
+    }
+
+    for (int pos = 1; maximum / pos > 0; pos *= 10)
+        CountSort(arr, n, pos);
+}
+
+int main()
+{
+    clock_t starttime, endtime;
+    starttime = clock();
+    double executiontime;
+
     int arr[200000];
-    int n, i, j, c, t, k = 0;
+    int c, n, k = 0;
     int line, number, flag = 0;
     char *inputfile;
 
-    printf("Bubble Sort \n Select File Name \n 1:Sorted Input File \n 2:Sorted Descending Input File \n 3:Random Input File \n");
+    printf("Radix Sort \nSelect File Name \n 1:Sorted Input File \n 2:Sorted Descending Input File \n 3:Random Input File \n");
     scanf("%d", &c);
 
     switch (c)
@@ -55,50 +96,23 @@ int BubbleSortFunction()
 
     fclose(fp);
 
-    for (i = 0; i < n - 1; i++)
-    {
-        for (j = 0; j < n - i - 1; j++)
-        {
-            if (arr[j] > arr[j + 1])
-            {
-                t = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = t;
-            }
-        }
-    }
+    RadixSortFunction(arr, n);
 
-    FILE *fp2 = fopen("BubbleSortoutputfile.txt", "w");
+    FILE *fp2 = fopen("RadixSortoutputfile.txt", "w");
     if (fp2 == NULL)
     {
         printf("Not able to open the output file");
         return 0;
     }
 
-    for (i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         fprintf(fp2, "%d\n", arr[i]);
 
     fclose(fp2);
 
-    // for (i = 0; i < n; i++)
-    // {
-    //     printf("%d \t", arr[i]);
-    // }
-    return 0;
-}
-
-int main()
-{
-    clock_t starttime, endtime;
-    starttime = clock();
-    double executiontime;
-
-    BubbleSortFunction();
-
     endtime = clock();
     executiontime = ((double)(endtime - starttime)) / CLOCKS_PER_SEC;
-
-    printf("Time = %f seconds", executiontime);
+    printf("Time = %f seconds \n", executiontime);
 
     return 0;
 }

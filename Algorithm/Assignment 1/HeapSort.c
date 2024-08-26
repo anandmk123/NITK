@@ -1,14 +1,53 @@
 #include <stdio.h>
 #include <time.h>
 
-int BubbleSortFunction()
+void heapify(int arr[],int n,int index){
+    int t;
+    int left=2*index+1;
+    int right=2*index+2;
+
+    if(left<n){
+        int large=left;
+        if(right<n && arr[right]>arr[left])
+            large=right;
+        if(arr[large]>arr[index]){
+            int t=arr[index];
+            arr[index]=arr[large];
+            arr[large]=t;
+            heapify(arr,n,large);
+        }
+    }
+
+
+}
+
+void HeapSortFunction(int arr[],int n)
 {
+    int i,j,t;
+    // Build max heap
+    for(i=n/2 -1;i>=0;i--)
+        heapify(arr,n,i);
+    
+    for(j=n-1;j>=0;j--){
+        t=arr[j];
+        arr[j]=arr[0];
+        arr[0]=t;
+        heapify(arr,j,0);
+    }
+}
+
+int main()
+{
+    clock_t starttime, endtime;
+    starttime = clock();
+    double executiontime;
+
     int arr[200000];
-    int n, i, j, c, t, k = 0;
+    int c, n, k = 0;
     int line, number, flag = 0;
     char *inputfile;
 
-    printf("Bubble Sort \n Select File Name \n 1:Sorted Input File \n 2:Sorted Descending Input File \n 3:Random Input File \n");
+    printf("Heap Sort \nSelect File Name \n 1:Sorted Input File \n 2:Sorted Descending Input File \n 3:Random Input File \n");
     scanf("%d", &c);
 
     switch (c)
@@ -55,50 +94,23 @@ int BubbleSortFunction()
 
     fclose(fp);
 
-    for (i = 0; i < n - 1; i++)
-    {
-        for (j = 0; j < n - i - 1; j++)
-        {
-            if (arr[j] > arr[j + 1])
-            {
-                t = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = t;
-            }
-        }
-    }
+    HeapSortFunction(arr,n);
 
-    FILE *fp2 = fopen("BubbleSortoutputfile.txt", "w");
+    FILE *fp2 = fopen("HeapSortoutputfile.txt", "w");
     if (fp2 == NULL)
     {
         printf("Not able to open the output file");
         return 0;
     }
 
-    for (i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         fprintf(fp2, "%d\n", arr[i]);
 
     fclose(fp2);
 
-    // for (i = 0; i < n; i++)
-    // {
-    //     printf("%d \t", arr[i]);
-    // }
-    return 0;
-}
-
-int main()
-{
-    clock_t starttime, endtime;
-    starttime = clock();
-    double executiontime;
-
-    BubbleSortFunction();
-
     endtime = clock();
     executiontime = ((double)(endtime - starttime)) / CLOCKS_PER_SEC;
-
-    printf("Time = %f seconds", executiontime);
+    printf("Time = %f seconds \n", executiontime);
 
     return 0;
 }

@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <time.h>
 
-int BubbleSortFunction()
+int InsertionSortFunction()
 {
+
     int arr[200000];
-    int n, i, j, c, t, k = 0;
+    int i, j,c, n,k = 0;
     int line, number, flag = 0;
     char *inputfile;
 
-    printf("Bubble Sort \n Select File Name \n 1:Sorted Input File \n 2:Sorted Descending Input File \n 3:Random Input File \n");
+    printf("Insertion Sort \nSelect File Name \n 1:Sorted Input File \n 2:Sorted Descending Input File \n 3:Random Input File \n");
     scanf("%d", &c);
 
     switch (c)
@@ -55,20 +56,19 @@ int BubbleSortFunction()
 
     fclose(fp);
 
-    for (i = 0; i < n - 1; i++)
+    for (i = 1; i < n; i++)
     {
-        for (j = 0; j < n - i - 1; j++)
+        int key = arr[i];
+        j = i - 1;
+        while (j >= 0 && arr[j] > key)
         {
-            if (arr[j] > arr[j + 1])
-            {
-                t = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = t;
-            }
+            arr[j + 1] = arr[j];
+            j--;
         }
+        arr[j + 1] = key;
     }
 
-    FILE *fp2 = fopen("BubbleSortoutputfile.txt", "w");
+    FILE *fp2 = fopen("InsertionSortoutputfile.txt", "w");
     if (fp2 == NULL)
     {
         printf("Not able to open the output file");
@@ -80,9 +80,9 @@ int BubbleSortFunction()
 
     fclose(fp2);
 
-    // for (i = 0; i < n; i++)
+    // for (i = 0; i < 10; ++i)
     // {
-    //     printf("%d \t", arr[i]);
+    //     printf("%d ", arr[i]);
     // }
     return 0;
 }
@@ -92,9 +92,7 @@ int main()
     clock_t starttime, endtime;
     starttime = clock();
     double executiontime;
-
-    BubbleSortFunction();
-
+    InsertionSortFunction();
     endtime = clock();
     executiontime = ((double)(endtime - starttime)) / CLOCKS_PER_SEC;
 

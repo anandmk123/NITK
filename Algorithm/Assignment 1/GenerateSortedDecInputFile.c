@@ -10,11 +10,12 @@ int main()
         return 0;
     }
 
-    fprintf(fp, "%d\n",10);
-    for (i = 10; i > 0; i--)
+    fprintf(fp, "%d\n",200000);
+    for (i = 300000; i > 100000; i--)
         fprintf(fp, "%d\n", i);
 
     fclose(fp);
+    
 
     return 0;
 }
