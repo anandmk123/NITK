@@ -2,6 +2,23 @@
 #include <time.h>
 #include <stdlib.h>
 
+int findmedian(int arr[], int low, int high)
+{
+
+    int middle = (low + high) / 2;
+    if ((arr[low] <= arr[middle]) && (arr[middle] <= arr[high]))
+        return middle;
+    if ((arr[low] <= arr[high]) && (arr[high] <= arr[middle]))
+        return high;
+    if ((arr[middle] <= arr[low]) && (arr[low] <= arr[high]))
+        return low;
+    if ((arr[middle] <= arr[high]) && (arr[high] <= arr[low]))
+        return high;
+    if ((arr[high] <= arr[low]) && (arr[low] <= arr[middle]))
+        return low;
+    return middle;
+}
+
 int GenerateRandom(int low, int high)
 {
     srand(time(0));
@@ -19,13 +36,13 @@ void swap(int *a, int *b)
 int partition(int arr[], int low, int high)
 {
     int pivotvalue = arr[low];
-    int i = low;
-    for (int j = low + 1; j <= high; j++)
+    int i = high;
+    for (int j = high; j > low; j--)
     {
-        if (arr[j] <= pivotvalue)
+        if (arr[j] > pivotvalue)
         {
-            i = i + 1;
             swap(&arr[i], &arr[j]);
+            i = i - 1;
         }
     }
     swap(&arr[low], &arr[i]);
@@ -41,6 +58,11 @@ void QuickSortFunction(int arr[], int low, int high, int p)
             int random_number = GenerateRandom(low, high);
             swap(&arr[low], &arr[random_number]);
         }
+        else if (p == 3)
+        {
+            int median = findmedian(arr, low, high);
+            swap(&arr[low], &arr[median]);
+        }
         int index = partition(arr, low, high);
         QuickSortFunction(arr, low, index - 1, p);
         QuickSortFunction(arr, index + 1, high, p);
@@ -53,7 +75,7 @@ int main()
     starttime = clock();
     double executiontime;
 
-    int arr[200000];
+    int arr[100000];
     int c, n, p, k = 0;
     int line, number, flag = 0;
     char *inputfile;
@@ -104,9 +126,6 @@ int main()
     }
 
     fclose(fp);
-
-    // int arr[] = {7, 6, 10, 5, 9, 2, 1, 15, 7, 2, 2, 2, 6, 34, 12, 432, 2, 11111, 6, 21, 9, 0, 6, 23};
-    // int p, n = 24;
 
     printf("Select Pivot element \n 1:First element \n 2:Random element \n 3:The median of the first, middle, and last elements \n");
     scanf("%d", &p);

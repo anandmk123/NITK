@@ -1,10 +1,31 @@
 #include <stdio.h>
 #include <time.h>
 
-int BubbleSortFunction()
+int BubbleSortFunction(int arr[], int n)
 {
-    int arr[200000];
-    int n, i, j, c, t, k = 0;
+    int i,j,t;
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                t = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = t;
+            }
+        }
+    }
+    return 0;
+}
+
+int main()
+{
+    clock_t starttime, endtime;
+    double executiontime;
+
+    int arr[100000];
+    int n,i,c,k = 0;
     int line, number, flag = 0;
     char *inputfile;
 
@@ -54,19 +75,9 @@ int BubbleSortFunction()
     }
 
     fclose(fp);
-
-    for (i = 0; i < n - 1; i++)
-    {
-        for (j = 0; j < n - i - 1; j++)
-        {
-            if (arr[j] > arr[j + 1])
-            {
-                t = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = t;
-            }
-        }
-    }
+    starttime = clock();
+    BubbleSortFunction(arr, n);
+    endtime = clock();
 
     FILE *fp2 = fopen("BubbleSortoutputfile.txt", "w");
     if (fp2 == NULL)
@@ -80,22 +91,6 @@ int BubbleSortFunction()
 
     fclose(fp2);
 
-    // for (i = 0; i < n; i++)
-    // {
-    //     printf("%d \t", arr[i]);
-    // }
-    return 0;
-}
-
-int main()
-{
-    clock_t starttime, endtime;
-    starttime = clock();
-    double executiontime;
-
-    BubbleSortFunction();
-
-    endtime = clock();
     executiontime = ((double)(endtime - starttime)) / CLOCKS_PER_SEC;
 
     printf("Time = %f seconds", executiontime);
