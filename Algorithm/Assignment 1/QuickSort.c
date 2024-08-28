@@ -72,7 +72,6 @@ void QuickSortFunction(int arr[], int low, int high, int p)
 int main()
 {
     clock_t starttime, endtime;
-    starttime = clock();
     double executiontime;
 
     int arr[100000];
@@ -129,8 +128,9 @@ int main()
 
     printf("Select Pivot element \n 1:First element \n 2:Random element \n 3:The median of the first, middle, and last elements \n");
     scanf("%d", &p);
-
+    starttime = clock();
     QuickSortFunction(arr, 0, n - 1, p);
+    endtime = clock();
 
     FILE *fp2 = fopen("QuickSortoutputfile.txt", "w");
     if (fp2 == NULL)
@@ -144,7 +144,6 @@ int main()
 
     fclose(fp2);
 
-    endtime = clock();
     executiontime = ((double)(endtime - starttime)) / CLOCKS_PER_SEC;
     printf("Time = %f seconds \n", executiontime);
 

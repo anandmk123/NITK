@@ -1,11 +1,18 @@
 #include <stdio.h>
 #include <sys/time.h>
+#include<stdlib.h>
 
-int main(void) {
-  struct timeval stop, start;
-  gettimeofday(&start, NULL);
-  //do stuff
-  gettimeofday(&stop, NULL);
-  printf("took %lu us\n", (stop.tv_sec - start.tv_sec) * 1000000 + stop.tv_usec - start.tv_usec);
-  return 0;
+long currentTimeMillis() {
+  struct timeval time;
+  gettimeofday(&time, NULL);
+
+  return time.tv_sec * 1000 + time.tv_usec / 1000;
 }
+
+int main() {
+  printf("%ld\n", currentTimeMillis());
+  // wait 1 second
+  sleep(1);
+  printf("%ld\n", currentTimeMillis());
+  return 0;
+ }

@@ -41,10 +41,9 @@ void RadixSortFunction(int arr[], int n)
 int main()
 {
     clock_t starttime, endtime;
-    starttime = clock();
     double executiontime;
 
-    int arr[200000];
+    int arr[100000];
     int c, n, k = 0;
     int line, number, flag = 0;
     char *inputfile;
@@ -95,8 +94,9 @@ int main()
     }
 
     fclose(fp);
-
+    starttime = clock();
     RadixSortFunction(arr, n);
+    endtime = clock();
 
     FILE *fp2 = fopen("RadixSortoutputfile.txt", "w");
     if (fp2 == NULL)
@@ -110,7 +110,6 @@ int main()
 
     fclose(fp2);
 
-    endtime = clock();
     executiontime = ((double)(endtime - starttime)) / CLOCKS_PER_SEC;
     printf("Time = %f seconds \n", executiontime);
 

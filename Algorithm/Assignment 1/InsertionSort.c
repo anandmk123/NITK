@@ -1,11 +1,32 @@
 #include <stdio.h>
 #include <time.h>
 
-int InsertionSortFunction()
+int InsertionSortFunction(int arr[],int n)
 {
+    int i, j;
+ 
+    for (i = 1; i < n; i++)
+    {
+        int key = arr[i];
+        j = i - 1;
+        while (j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
 
-    int arr[200000];
-    int i, j,c, n,k = 0;
+    return 0;
+}
+
+int main()
+{
+    clock_t starttime, endtime;
+    double executiontime;
+
+    int arr[10000];
+    int i,c,n,k = 0;
     int line, number, flag = 0;
     char *inputfile;
 
@@ -55,18 +76,9 @@ int InsertionSortFunction()
     }
 
     fclose(fp);
-
-    for (i = 1; i < n; i++)
-    {
-        int key = arr[i];
-        j = i - 1;
-        while (j >= 0 && arr[j] > key)
-        {
-            arr[j + 1] = arr[j];
-            j--;
-        }
-        arr[j + 1] = key;
-    }
+    starttime = clock();
+    InsertionSortFunction(arr,n);
+    endtime = clock();
 
     FILE *fp2 = fopen("InsertionSortoutputfile.txt", "w");
     if (fp2 == NULL)
@@ -80,20 +92,6 @@ int InsertionSortFunction()
 
     fclose(fp2);
 
-    // for (i = 0; i < 10; ++i)
-    // {
-    //     printf("%d ", arr[i]);
-    // }
-    return 0;
-}
-
-int main()
-{
-    clock_t starttime, endtime;
-    starttime = clock();
-    double executiontime;
-    InsertionSortFunction();
-    endtime = clock();
     executiontime = ((double)(endtime - starttime)) / CLOCKS_PER_SEC;
 
     printf("Time = %f seconds", executiontime);
