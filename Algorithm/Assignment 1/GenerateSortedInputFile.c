@@ -10,8 +10,8 @@ int main()
         return 0;
     }
 
-    fprintf(fp, "%d\n",20000);
-    for (i = 100000; i < 120000; i++)
+    fprintf(fp, "%d\n",100000);
+    for (i = 100000; i < 200000; i++)
         fprintf(fp, "%d\n", i);
 
     fclose(fp);
