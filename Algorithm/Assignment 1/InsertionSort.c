@@ -25,7 +25,7 @@ int main()
     clock_t starttime, endtime;
     double executiontime;
 
-    int arr[10000];
+    int arr[20000];
     int i,c,n,k = 0;
     int line, number, flag = 0;
     char *inputfile;
