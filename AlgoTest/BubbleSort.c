@@ -2,7 +2,6 @@
 #include <time.h>
 #include <sys/time.h>
 
-
 int BubbleSortFunction(int arr[], int n)
 {
     int i, j, t;
@@ -71,9 +70,9 @@ int main()
         BubbleSortFunction(arr, n);
         gettimeofday(&tv2, NULL);
 
-        executiontime=(double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
-                   (double)(tv2.tv_sec - tv1.tv_sec);
-
+        executiontime = (double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
+                        (double)(tv2.tv_sec - tv1.tv_sec);
+        executiontime=executiontime*1000;
         FILE *fp2 = fopen(Sortedoutputfile[j], "w");
         if (fp2 == NULL)
         {
@@ -87,7 +86,7 @@ int main()
         fclose(fp2);
         exectime[j] = executiontime;
 
-        printf("Time of %s = %f seconds \n", Sortedoutputfile[j], executiontime);
+        printf("Time of %s = %f milli seconds \n", Sortedoutputfile[j], executiontime);
     }
 
     FILE *fp3 = fopen("./time/SortedBubbleTime", "w");
@@ -145,8 +144,9 @@ int main()
         BubbleSortFunction(arr, n);
         gettimeofday(&tv2, NULL);
 
-        executiontime=(double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
-                   (double)(tv2.tv_sec - tv1.tv_sec);
+        executiontime = (double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
+                        (double)(tv2.tv_sec - tv1.tv_sec);
+        executiontime = executiontime * 1000;
         FILE *fp2 = fopen(Descendoutputfile[j], "w");
         if (fp2 == NULL)
         {
@@ -160,7 +160,7 @@ int main()
         fclose(fp2);
         exectime[j] = executiontime;
 
-        printf("Time of %s = %f seconds \n", Descendoutputfile[j], executiontime);
+        printf("Time of %s = %f milli seconds \n", Descendoutputfile[j], executiontime);
     }
 
     FILE *fp4 = fopen("./time/DescendBubbleTime", "w");
@@ -180,9 +180,9 @@ int main()
     // Random Input
 
     char *Randominputfile[] = {"./input/Random10000.txt", "./input/Random20000.txt", "./input/Random30000.txt", "./input/Random40000.txt",
-                                "./input/Random50000.txt", "./input/Random60000.txt", "./input/Random70000.txt", "./input/Random80000.txt", "./input/Random90000.txt", "./input/Random100000.txt"};
+                               "./input/Random50000.txt", "./input/Random60000.txt", "./input/Random70000.txt", "./input/Random80000.txt", "./input/Random90000.txt", "./input/Random100000.txt"};
     char *Randomoutputfile[] = {"./output/Random10000.txt", "./output/Random20000.txt", "./output/Random30000.txt", "./output/Random40000.txt",
-                                 "./output/Random50000.txt", "./output/Random60000.txt", "./output/Random70000.txt", "./output/Random80000.txt", "./output/Random90000.txt", "./output/Random100000.txt"};
+                                "./output/Random50000.txt", "./output/Random60000.txt", "./output/Random70000.txt", "./output/Random80000.txt", "./output/Random90000.txt", "./output/Random100000.txt"};
     for (int j = 0; j < 10; j++)
     {
         k = 0;
@@ -218,8 +218,9 @@ int main()
         BubbleSortFunction(arr, n);
         gettimeofday(&tv2, NULL);
 
-        executiontime=(double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
-                   (double)(tv2.tv_sec - tv1.tv_sec);
+        executiontime = (double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
+                        (double)(tv2.tv_sec - tv1.tv_sec);
+        executiontime = executiontime * 1000;
         FILE *fp2 = fopen(Randomoutputfile[j], "w");
         if (fp2 == NULL)
         {
@@ -232,8 +233,9 @@ int main()
 
         fclose(fp2);
         exectime[j] = executiontime;
+        executiontime = executiontime * 1000;
 
-        printf("Time of %s = %f seconds \n", Randomoutputfile[j], executiontime);
+        printf("Time of %s = %f milli seconds \n", Randomoutputfile[j], executiontime);
     }
 
     FILE *fp5 = fopen("./time/RandomBubbleTime", "w");
