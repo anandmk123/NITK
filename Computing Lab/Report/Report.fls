@@ -1,0 +1,93 @@
+PWD d:\Doc\NITK\S1\Computing Lab\Report
+INPUT C:\Users\Anand M K\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT d:\Doc\NITK\S1\Computing Lab\Report\Report.tex
+OUTPUT Report.log
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\ragged2e\ragged2e.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\ragged2e\ragged2e.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\Report.aux
+INPUT .\Report.aux
+INPUT Report.aux
+OUTPUT Report.aux
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+OUTPUT Report.pdf
+INPUT C:\Users\Anand M K\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\projectflow1.png
+INPUT .\projectflow1.png
+INPUT .\projectflow1.png
+INPUT .\projectflow1.png
+INPUT .\projectflow1.png
+INPUT .\projectflow1.png
+INPUT .\projectflow1.png
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT .\timeline.png
+INPUT .\timeline.png
+INPUT .\timeline.png
+INPUT .\timeline.png
+INPUT .\timeline.png
+INPUT .\timeline.png
+INPUT .\timeline.png
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
+INPUT Report.aux
+INPUT C:\Users\Anand M K\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\Anand M K\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti8.pfb
+INPUT C:\Users\Anand M K\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti8.pfb
