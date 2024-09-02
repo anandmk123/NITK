@@ -9,7 +9,7 @@ int main() {
     // Write C code here
         struct timeval tv1, tv2;
         gettimeofday(&tv1, NULL);
-        sleep(10);
+        sleep(2);
         gettimeofday(&tv2, NULL);
         printf("%f\n",(double)(tv2.tv_usec - tv1.tv_usec) / 1000000);
         printf("%f\n",(double)(tv2.tv_sec - tv1.tv_sec));

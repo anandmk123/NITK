@@ -233,8 +233,6 @@ int main()
 
         fclose(fp2);
         exectime[j] = executiontime;
-        executiontime = executiontime * 1000;
-
         printf("Time of %s = %f milli seconds \n", Randomoutputfile[j], executiontime);
     }
 

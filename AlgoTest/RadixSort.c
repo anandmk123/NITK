@@ -92,6 +92,7 @@ int main()
 
         executiontime = (double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
                         (double)(tv2.tv_sec - tv1.tv_sec);
+        executiontime = executiontime * 1000;
 
         FILE *fp2 = fopen(Sortedoutputfile[j], "w");
         if (fp2 == NULL)
@@ -106,7 +107,7 @@ int main()
         fclose(fp2);
         exectime[j] = executiontime;
 
-        printf("Time of %s = %f seconds \n", Sortedoutputfile[j], executiontime);
+        printf("Time of %s = %f milli seconds \n", Sortedoutputfile[j], executiontime);
     }
 
     FILE *fp3 = fopen("./time/SortedRadixTime", "w");
@@ -166,6 +167,7 @@ int main()
 
         executiontime = (double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
                         (double)(tv2.tv_sec - tv1.tv_sec);
+        executiontime = executiontime * 1000;
 
         FILE *fp2 = fopen(Descendoutputfile[j], "w");
         if (fp2 == NULL)
@@ -180,7 +182,7 @@ int main()
         fclose(fp2);
         exectime[j] = executiontime;
 
-        printf("Time of %s = %f seconds \n", Descendoutputfile[j], executiontime);
+        printf("Time of %s = %f milli seconds \n", Descendoutputfile[j], executiontime);
     }
 
     FILE *fp4 = fopen("./time/DescendRadixTime", "w");
@@ -240,6 +242,8 @@ int main()
 
         executiontime = (double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
                         (double)(tv2.tv_sec - tv1.tv_sec);
+        executiontime = executiontime * 1000;
+
         FILE *fp2 = fopen(Randomoutputfile[j], "w");
         if (fp2 == NULL)
         {
@@ -253,7 +257,7 @@ int main()
         fclose(fp2);
         exectime[j] = executiontime;
 
-        printf("Time of %s = %f seconds \n", Randomoutputfile[j], executiontime);
+        printf("Time of %s = %f milli seconds \n", Randomoutputfile[j], executiontime);
     }
 
     FILE *fp5 = fopen("./time/RandomRadixTime", "w");
