@@ -140,7 +140,7 @@ Three versions of QuickSort have been considered for analysis:
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{./QuickSortPivotFirst.png}
+    \includegraphics[width=1.1\textwidth]{./QuickSortPivotFirst.png}
     \caption{Performance of QuickSort with Pivot as the First Element}
     \label{fig:quicksort_performance}
 \end{figure}
@@ -156,7 +156,7 @@ Three versions of QuickSort have been considered for analysis:
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{./QuickSortPivotRandom.png}
+    \includegraphics[width=1.1\textwidth]{./QuickSortPivotRandom.png}
     \caption{Performance of QuickSort with Random Pivot Choice}
     \label{fig:quicksort_random_pivot}
 \end{figure}
@@ -172,7 +172,7 @@ Three versions of QuickSort have been considered for analysis:
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{./QuickSortPivotMedian.png}
+    \includegraphics[width=1.1\textwidth]{./QuickSortPivotMedian.png}
     \caption{Performance of QuickSort with Pivot as the Median of the First, Middle, and Last Elements}
     \label{fig:quicksort_median_pivot}
 \end{figure}
@@ -186,13 +186,42 @@ As per the above analysis, the best case occurs when the partitions are balanced
 
     \item \textbf{Version 3:} Even though all types of inputs result in \(O(n \log n)\), considering the experiments conducted and the graph, the sorted array in increasing order gives the best times.
 \end{itemize}
-
+Following Figure-4 shows the best case running time for all the three versions of quick
+sort.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{./Best_case_QuickSort.png}
+    \includegraphics[width=1.1\textwidth]{./Best_case_QuickSort.png}
     \caption{Best case running time of QuickSort for all three versions}
     \label{fig:quicksort_median_pivot}
 \end{figure}
+
+\subsection{Worst Case Performance of Three Versions of Quick Sort}
+Worst case occurs when partitions are highly unbalanced, which leads to a worst-case time complexity of \(O(n^2)\).
+\begin{itemize}
+    \item \textbf{Version 1:} For both sorted lists (increasing and decreasing), when the pivot is the first element, it leads to unbalanced partitions and a time complexity of \(O(n^2)\). Though both the increasing and decreasing arrays have the same time complexity of \(O(n^2)\), the experiments show that the increasing array results in the worst time.
+
+    \item \textbf{Version 2:} When the pivot is selected randomly, there is a very low chance of getting an unbalanced partition. The worst case occurs when the randomly selected pivot consistently picks extreme values (either the smallest or largest element), which is highly unlikely. According to experiments and analysis, all three inputs result in the same time complexity of \(O(n \log n)\), but the random order array yields the worst time among them.
+
+    \item \textbf{Version 3:} Similar to the case with a random pivot, using the median of the first, middle, and last elements as the pivot generally prevents the worst-case scenario. According to the experiments, while all input versions have a time complexity of \(O(n \log n)\), the random order array results in the worst performance.
+
+\end{itemize}
+Following Figure-5 and Figure-6 shows worst case running time of all the three versions of quick sort
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{./Worst_case_QuickSort.png}
+    \caption{Worst case running time of QuickSort for all three versions}
+    \label{fig:quicksort_median_pivot}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{./Worst_case_QuickSort _Magnified_view.png}
+    \caption{Worst case running time of QuickSort(Magnified view: Version 2 vs Version 3)}
+    \label{fig:quicksort_median_pivot}
+\end{figure}
+
+\subsection{Average Case Performance of Three Versions of Quick Sort}
+
 
 
 \end{document}
