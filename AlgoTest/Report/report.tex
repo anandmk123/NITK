@@ -83,7 +83,7 @@ Where \( n \) varies from 10,000 to 100,000, with intervals of 10,000. For each 
 \subsection{Machine Specifications}
 \begin{itemize}
   \item CPU: 11th Gen Intel® Core™ i5-11500 @ 2.70GHz × 12
-  \item RAM: 16 GB
+  \item RAM: 16 GiB
   \item Operating System: Ubuntu 22.04.4 LTS
   \item Compiler: gcc 11.4.0
 \end{itemize}
@@ -192,7 +192,7 @@ sort.
     \centering
     \includegraphics[width=1.1\textwidth]{./Best_case_QuickSort.png}
     \caption{Best case running time of QuickSort for all three versions}
-    \label{fig:quicksort_median_pivot}
+    \label{fig:Best case of quicksort}
 \end{figure}
 
 \subsection{Worst Case Performance of Three Versions of Quick Sort}
@@ -210,18 +210,42 @@ Following Figure-5 and Figure-6 shows worst case running time of all the three v
     \centering
     \includegraphics[width=1.1\textwidth]{./Worst_case_QuickSort.png}
     \caption{Worst case running time of QuickSort for all three versions}
-    \label{fig:quicksort_median_pivot}
+    \label{fig:Worst case quicksort}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{./Worst_case_QuickSort _Magnified_view.png}
     \caption{Worst case running time of QuickSort(Magnified view: Version 2 vs Version 3)}
-    \label{fig:quicksort_median_pivot}
+    \label{fig:Worst case quicksort Magnified}
 \end{figure}
 
 \subsection{Average Case Performance of Three Versions of Quick Sort}
+All three versions of QuickSort yield an average time complexity of \(O(n \log n)\).
+\begin{itemize}
+	\item \textbf{Version 1:} When the array is neither fully sorted nor completely unbalanced, balanced partitions occur on average, leading to an average time complexity of \(O(n \log n)\). For analyzing the average case, a different input file was considered where parts of the array are sorted, and other parts are shuffled.
+	
+	\item \textbf{Version 2:} When the pivot is selected randomly, the average case also results in a time complexity of \(O(n \log n)\). The random pivot choice tends to create balanced partitions on average, leading to efficient sorting in most cases.
+	
+	\item \textbf{Version 3:} Using the median of the first, middle, and last elements as the pivot generally produces more balanced partitions, resulting in an average case time complexity of \(O(n \log n)\). This method minimizes the chances of extreme unbalanced partitions, ensuring consistent performance across different input types.
+\end{itemize}
+Following Figure-7 and Figure-8 shows Average case running time of all the three versions of quick sort
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./Average_case_QuickSort.png}
+	\caption{Average case running time of QuickSort for all three versions}
+	\label{fig:Average case quicksort}
+\end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./Average_case_QuickSort_Magnified_view.png}
+	\caption{Worst case running time of QuickSort(Magnified view: Version 2 vs Version 3)}
+	\label{fig:Average case quicksort Magnified}
+\end{figure}
 
+\subsection{Conclusion of Quicksort Analysis}
+ By considering all the analysis, the median-based pivot is the most reliable, minimizing the chances of extreme unbalanced partitions and consistently providing a time complexity of \(O(n \log n)\) across all three input versions. This is followed by the random pivot, with the first-element pivot being the least favorable.
+ 
 
 \end{document}
