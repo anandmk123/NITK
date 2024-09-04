@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Running the Code}
+
+\begin{itemize}[label=--]
+    \item To compile the code, you need the \texttt{gcc} compiler.
+    \item Input files should be placed in the \texttt{input} folder.
+    \item Sorted output files will be saved in the \texttt{Output} folder.
+    \item Execution time will be saved in the \texttt{Time} folder.
+\end{itemize}
+
+\noindent\textbf{Steps:}
+
+\begin{enumerate}
+    \item Compile the code using \texttt{gcc}:
+    \begin{verbatim}
+    gcc filename.c
+    \end{verbatim}
+    For example, to compile the Bubble Sort program:
+    \begin{verbatim}
+    gcc BubbleSort.c
+    \end{verbatim}
+
+    \item After successful compilation, run the program:
+    \begin{verbatim}
+    ./a.out
+    \end{verbatim}
+\end{enumerate}
+
+\end{document}

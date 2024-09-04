@@ -342,7 +342,54 @@ Following Figure-13 and Figure-14 shows Average case running time of all the sor
 Based on the practical analysis and graphical evaluations, Radix Sort demonstrates strong performance across the best, average, and worst-case scenarios. Theoretically, the time complexity of Radix Sort is \(O(n \cdot d)\), where \(n\) represents the number of elements and \(d\) represents the number of digits in the largest number. However, if \(d\) is very, very large, the performance of Radix Sort will decrease. In my practical analysis, where \(d = 100,000\) (number of digits in the largest number), Radix Sort still performs well according to the practical analysis.
 On the other hand, Quicksort with the median pivot also performs very well across the best, average, and worst-case scenarios, irrespective of the number of digits in the largest number. Therefore, when \(d\) is extremely large, Quicksort with the median pivot may be the better option.
 
-\section{Number of Comparisons and Execution Time}
+\section{Analysis of Number of Comparisons}
+Based on the following analysis, the number of comparisons for all algorithms, except Radix Sort, is correlated with execution time. This correlation indicates that as the number of comparisons increases, the execution time also tends to increase. Radix Sort does not rely on comparisons but processes individual digits instead. Comparison analysis has been conducted for all three types of inputs.
+\newline
+\subsection{Sorted Array in Increasing Order}
+The graph clearly shows that the number of comparisons increases with input size for all sorting algorithms. Therefore, the number of comparisons is correlated with execution time.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\textwidth]{./Comparison_Sorted.png}
+	\caption{Analysis of Number of Comparisons for  Sorted Array in Increasing Order}
+	\label{fig:Comparisonsorting}
+\end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\textwidth]{./Comparison_Sorted_Magnified.png}
+	\caption{Analysis of Number of Comparisons for  Sorted Array in Increasing Order (Magnified view: Without Bubble Sort)}
+	\label{fig:Comparisonsortingmagnified}
+\end{figure}
+\subsection{Sorted Array in Decreasing  Order}
+The graph clearly shows that the number of comparisons increases with input size for all sorting algorithms. Therefore, the number of comparisons is correlated with execution time.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\textwidth]{./Comparison_Decreasing.png}
+	\caption{Analysis of Number of Comparisons for  Sorted Array in Decreasing Order}
+	\label{fig:ComparisonDecreasing}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\textwidth]{./Comparison_Decreasing_Magnified.png}
+	\caption{Analysis of Number of Comparisons for  Sorted Array in Decreasing Order (Magnified view: Without Bubble Sort and Insertion Sort)}
+	\label{fig:ComparisonsortingDecreasing}
+\end{figure}
+
+\subsection{Random Array}
+The graph clearly shows that the number of comparisons increases with input size for all sorting algorithms. Therefore, the number of comparisons is correlated with execution time.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\textwidth]{./Comparison_Random.png}
+	\caption{Analysis of Number of Comparisons for Random Array}
+	\label{fig:ComparisonRandom}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.9\textwidth]{./Comparison_Random_Magnified.png}
+	\caption{Analysis of Number of Comparisons for  Random Array (Magnified view: Without Bubble Sort and Insertion Sort)}
+	\label{fig:ComparisonsortingRandom}
+\end{figure}
 
 \end{document}

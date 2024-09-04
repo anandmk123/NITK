@@ -29,27 +29,27 @@
 
     \vspace*{0.1in}
 
-    {\Huge\bfseries Pre-owned Car Price Prediction\par}
+    {\Huge\bfseries Conversational Used Car Price Predictor\par}
     \vspace{1in}
 \end{center}
 
 \section*{Introduction}
 \begin{justify}
-
-In today's world, where people’s living standards have greatly improved, cars have become a necessary part of life. The latest statistics show that the demand for used cars has increased significantly.  The average consumer may not have enough knowledge and information needed to accurately evaluate the price of a car they wish to buy, which can leave them vulnerable to being scammed. This is where price prediction using Machine Learning or Deep Learning becomes significant. This will give consumers a clear picture of current market prices and trends.  
+In today’s world, conversational interfaces are essential for making interactions with technology easier and more natural. They use smart technology to chat with users, understand their needs, and provide helpful responses. In this project we want to develop a conversational interface for a used car price predictor model.  The latest statistics show that the demand for used cars has increased significantly.  The average consumer may not have enough knowledge and information needed to accurately evaluate the price of a car they wish to buy, which can leave them vulnerable to being scammed. This is where price prediction using Machine Learning or Deep Learning becomes significant. This will give consumers a clear picture of current market prices and trends. 
 \newline
 
-The main goal of this project is to design a prediction model using the most accurate algorithm, which will be selected after comparing various Machine Learning and Deep Learning algorithms. The project also includes designing a user-friendly website that will enable consumers to use the prediction model to estimate prices effortlessly.
+The main goal of this project is to develop a conversational interface which will interact with the user to get the necessary parameters for the prediction model. The prediciton model will generate the car price which will be displayed to the user through the interface.
 \newline
 
-The motive of the project is to study and analyze various machine learning and deep learning algorithms, as well as to gain a clear understanding of different aspects of web development.
+The motive of the project is to enhance user experience with the help of a conversational interface. This interface will interact with users to gather all the necessary information for making accurate predictions.
 
 \end{justify}
 
 \section*{Problem Statement and Objectives}
 \begin{justify}
+Estimating the price of a used car can be complex, with various factors influencing its value. Traditional methods often require users to input information manually, which can be confusing and inefficient. This can lead to inaccurate estimates and a frustrating user experience.
+There are various parameters, such as mileage, kilometers driven, engine capacity, fuel type, etc., that must be considered to accurately predict prices. The available data may contain duplicates and outliers, making it necessary to clean the data before using it to train the models. 
 
-There are various parameters, such as mileage, kilometers driven, engine capacity, fuel type, etc., that must be considered to accurately predict prices. Therefore, it is challenging to calculate the price using traditional mathematical algorithms. Several Machine Learning regression algorithms, such as Linear Regression, Decision Tree, and Deep Learning, can be applied to these types of problems. However, identifying the best algorithm is a challenging task. The main objective of the project is to study, analyze, and compare these algorithms to build the most accurate model. The available data may contain duplicates and outliers, making it necessary to clean the data before using it to train the models. Another objective is to design a user-friendly, responsive, and fast-performing website that allows consumers to easily predict prices based on their requirements.
 
 \end{justify}
 
@@ -60,7 +60,7 @@ There are various parameters, such as mileage, kilometers driven, engine capacit
 \begin{justify}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.8\textwidth]{./projectflow1.png}
+    \includegraphics[width=.8\textwidth]{./Flowchart2.png}
     \caption{Solution Flowchart}
     \label{fig:your-label}
 \end{figure}
@@ -74,30 +74,38 @@ The second phase of the project is to train the model. The Scikit-learn library 
 The third phase of the project is to compare the performance of different algorithms using performance metrics such as Mean Absolute Error (MAE) and select the most accurate algorithm. This chosen algorithm will then be used to train the final model.
 \newline
 
-The fourth phase of the project is to develop the frontend of the website. This includes designing the UI, which will feature various input fields for parameters such as car model, year of registration, engine capacity, mileage, kilometers driven, etc. Additionally, there will be a "Predict" button that, when clicked, will process the inputs and present the results to the user. The designed UI can then be implemented using web development tools such as HTML, CSS, JavaScript, and React.js
+The fourth phase of the project is to develop the Conversational Interfaces. NLP tools like Rasa can be used for this.
+\newline
+\newline
+The fifth phase focuses on developing the frontend of the website, which involves designing and implementing the user interface (UI) for the conversational interface. This will include a Chat Interface: A conversational UI where users can interact with the system through natural dialogue. This interface will guide users in providing necessary details about their cars and receiving price predictions. The UI can be implemented using web development tools such as HTML, CSS, JavaScript, and React.js
 \newline
 
-The fifth phase of the project is to develop the backend of the website. This can be implemented using Python frameworks such as Flask or Django.
+The sixth phase of the project is to develop the backend of the website. This can be implemented using Python frameworks such as Flask or Django.
 \newline
 
-The sixth and final phase of the project involves integrating the frontend and backend through API calls. Following integration, testing will be conducted using various test cases. Finally, documentation for the project will be prepared.
+The seventh and final phase of the project involves integrating the frontend and backend through API calls. Following integration, testing will be conducted using various test cases. Finally, documentation for the project will be prepared.
 
 \newpage
 \section*{Exepected Outcomes}
 	\begin{itemize}
+		\item The conversational interface will effectively interact with users, guiding them through the process of providing necessary car details in a natural and engaging manner.
 		\item A predictive model that provides accurate predictions based on user inputs.
-		\item A reliable and responsive website that accurately displays the expected price of a pre-owned car based on various input features.
 		\item Successful integration of the frontend and backend.
 
 	 \end{itemize}
 
 \section*{Tentative Timeline}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=.8\textwidth]{./timeline.png}
-    \caption{Timeline}
-    \label{fig:your-s}
-\end{figure}
+\begin{tabular}{|c|p{7cm}|c|}
+\hline
+\textbf{PHASE} & \textbf{DESCRIPTION} & \textbf{TIMELINE} \\ \hline
+1 & Finalizing project Design \& Module division & September 4 - September 10 \\ \hline
+2 & Dataset collection and pre-processing & September 11 - September 18 \\ \hline
+3 & Train Model and Compare Algorithm Performance & September 19 - September 30 \\ \hline
+5 & Conversational Interface development & October 1 - October 19 \\ \hline
+6 & Frontend Development & October 20 - November 4 \\ \hline
+7 & Backend Development & November 5 - November 16 \\ \hline
+8 & Integration, Testing, and Documentation & November 17 - November 20 \\ \hline
+\end{tabular}
 
 
 \begin{thebibliography}{9}
