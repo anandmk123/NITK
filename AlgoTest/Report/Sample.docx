@@ -1,3 +1,0 @@
-All three versions quick sort gives average time complexity is O(nlogn). 
-Version1 : When the array is neither fully sorted nor completely unbalanced,there occurs balanced partitions on average.Which leads to average time complexity is O(nlogn). For analysing the Average Case a different input file has been considered with array where parts of it are sorted, and other parts are shuffled. 
-Version2: Since partion is not highly unbalanced s

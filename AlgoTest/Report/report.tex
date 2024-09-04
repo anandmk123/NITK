@@ -339,5 +339,10 @@ Following Figure-13 and Figure-14 shows Average case running time of all the sor
 \end{figure}
 
 \subsection{Conclusion}
-Based on the practical analysis and graphical evaluations, Radix Sort demonstrates strong performance across the best, average, and worst-case scenarios. Theoretically, the time complexity of Radix Sort is \(O(n \cdot d)\), where \(n\) represents the number of elements and \(d\) represents the number of digits.
+Based on the practical analysis and graphical evaluations, Radix Sort demonstrates strong performance across the best, average, and worst-case scenarios. Theoretically, the time complexity of Radix Sort is \(O(n \cdot d)\), where \(n\) represents the number of elements and \(d\) represents the number of digits in the largest number. However, if \(d\) is very, very large, the performance of Radix Sort will decrease. In my practical analysis, where \(d = 100,000\) (number of digits in the largest number), Radix Sort still performs well according to the practical analysis.
+On the other hand, Quicksort with the median pivot also performs very well across the best, average, and worst-case scenarios, irrespective of the number of digits in the largest number. Therefore, when \(d\) is extremely large, Quicksort with the median pivot may be the better option.
+
+\section{Number of Comparisons and Execution Time}
+
+
 \end{document}
