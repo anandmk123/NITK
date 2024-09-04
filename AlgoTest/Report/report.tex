@@ -36,7 +36,8 @@
   \large \textbf{Assignment-1} \\ % Subtitle
   \vspace{1em} % Space between subtitle and author
   \textbf{ANAND M K} \\ % Author
-  Roll Number: 242CS008 % Roll number
+  Roll Number: 242CS008 \\% Roll number
+  Department of Computer Science and Engg.- NITK Surathkal
 }
 
 \date{} % Remove the date
@@ -240,12 +241,103 @@ Following Figure-7 and Figure-8 shows Average case running time of all the three
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.1\textwidth]{./Average_case_QuickSort_Magnified_view.png}
-	\caption{Worst case running time of QuickSort(Magnified view: Version 2 vs Version 3)}
+	\caption{Average case running time of QuickSort(Magnified view: Version 2 vs Version 3)}
 	\label{fig:Average case quicksort Magnified}
 \end{figure}
 
 \subsection{Conclusion of Quicksort Analysis}
- By considering all the analysis, the median-based pivot is the most reliable, minimizing the chances of extreme unbalanced partitions and consistently providing a time complexity of \(O(n \log n)\) across all three input versions. This is followed by the random pivot, with the first-element pivot being the least favorable.
+By considering all the analyses, the median-based pivot is the most reliable, minimizing the chances of extremely unbalanced partitions and consistently providing a time complexity of O(n log n) across all three input versions. This is followed by the random pivot, with the first-element pivot being the least favorable.
  
+\section{Analysis of All Six Sorting Algorithms}
 
+\subsection{Analysis of Best Case}
+The best case for each of the six algorithms is different and occurs on various inputs. The following best cases are based on practical experiments and the execution time collected from actual performance. The theoretical time complexity is also included.
+\begin{itemize}
+    \item \textbf{Bubble Sort:} According to practical observations, a sorted array in increasing order yields the best times. However, the differences in execution times across all three input types are minimal, indicating that the order of input has little impact on the time. Theoretically, the time complexity for all three input versions is \(O(n^2)\). The graph also reflects this with a line representing \(O(n^2)\). \emph{(Note: I have considered the standard Bubble Sort, not the optimized version.)}
+    
+    \item \textbf{Insertion Sort:} Practical observations show that a sorted array in increasing order produces the best times. Theoretically, the time complexity for the best case is \(O(n)\), and the graph represents this as well.
+    
+    \item \textbf{Merge Sort:} Practical observations indicate that the execution times for all three inputs are almost identical, with only minor differences. This suggests that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Quick Sort (Median Pivot):} Practical observations reveal that a sorted array in increasing order yields the best times. However, the differences in execution times across all three inputs are minimal, implying that the order of input has little effect on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Heap Sort:} Practical observations show that a sorted array in decreasing order yields the best times, but the differences in execution times across all three inputs are minimal. This indicates that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Radix Sort:} Practical observations indicate that the execution times for all three inputs are nearly identical, with only slight differences, suggesting that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n)\).
+\end{itemize}
+Following Figure-9 and Figure-10 shows Best case running time of all the sorting algorithms. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./Bestofall.png}
+	\caption{Best case running time of all the sorting algorithms}
+	\label{fig:Best of all}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./BestofallMagnified.png}
+	\caption{Best case running time of all the sorting algorithms(Magnified view: Without Bubble Sort)}
+	\label{fig:Best of all Magnified}
+\end{figure}
+
+\subsection{Analysis of Worst Case}
+\begin{itemize}
+    \item \textbf{Bubble Sort:} According to practical observations, the random array yields the worst execution time. However, the differences in execution times across all three input types are minimal, indicating that the order of input has little impact on the time. Theoretically, the time complexity for all three input versions is \(O(n^2)\). \emph{(Note: I have considered the standard Bubble Sort, not the optimized version.)}
+    
+    \item \textbf{Insertion Sort:} Practical observations show that, sorted array in decreasing order produces the worst times. Theoretically, the time complexity for the worst case is \( O(n^2) \).
+    
+    \item \textbf{Merge Sort:} Practical observations indicate that the execution times for all three inputs are almost identical, with only minor differences. This suggests that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Quick Sort (Median Pivot):} Practical observations reveal that, random array yields the worst performance times. However, the differences in execution times across all three inputs are minimal, implying that the order of input has little effect on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Heap Sort:} Practical observations show that random array yields the worst execution times, but the differences in execution times across all three inputs are minimal. This indicates that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Radix Sort:} Practical observations indicate that the execution times for all three inputs are nearly identical, with only slight differences, suggesting that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n)\).
+\end{itemize}
+Following Figure-11 and Figure-12 shows Worst case running time of all the sorting algorithms. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./Worstofall.png}
+	\caption{Worst case running time of all the sorting algorithms}
+	\label{fig:Worst of all}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./Worstofallmagnified.png}
+	\caption{Worst case running time of all the sorting algorithms(Magnified view: Without Bubble Sort and Insertion Sort)}
+	\label{fig:Worst of all Magnified}
+\end{figure}
+
+\subsection{Analysis of Average Case}
+\begin{itemize}
+    \item \textbf{Bubble Sort:} According to practical observations, sorted array in decreasing order yields average execution times. However, the differences in execution times across all three input types are minimal, indicating that the order of input has little impact on the time. Theoretically, the time complexity for all three input versions is \(O(n^2)\). \emph{(Note: I have considered the standard Bubble Sort, not the optimized version.)}
+    
+    \item \textbf{Insertion Sort:} Practical observations show that a random array has average execution times. Theoretically, the time complexity for the average case is \( O(n^2) \).
+    
+    \item \textbf{Merge Sort:} Practical observations indicate that the execution times for all three inputs are almost identical, with only minor differences. This suggests that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Quick Sort (Median Pivot):} Practical observations reveal that sorted array in decreasing order yields average execution times. However, the differences in execution times across all three inputs are minimal, implying that the order of input has little effect on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Heap Sort:} Practical observations show that sorted array in increasing order yields average execution times, but the differences in execution times across all three inputs are minimal. This indicates that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n \log n)\).
+    
+    \item \textbf{Radix Sort:} Practical observations indicate that the execution times for all three inputs are nearly identical, with only slight differences, suggesting that the order of input has little impact on execution time. Theoretically, the time complexity for all three input versions is \(O(n)\).
+\end{itemize}
+Following Figure-13 and Figure-14 shows Average case running time of all the sorting algorithms. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./Averageofall.png}
+	\caption{Average case running time of all the sorting algorithms}
+	\label{fig:Average of all}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{./Averageofallmagnified.png}
+	\caption{Average case running time of all the sorting algorithms(Magnified view: Without Bubble Sort and Insertion Sort)}
+	\label{fig:Average of all Magnified}
+\end{figure}
+
+\subsection{Conclusion}
+Based on the practical analysis and graphical evaluations, Radix Sort demonstrates strong performance across the best, average, and worst-case scenarios. Theoretically, the time complexity of Radix Sort is \(O(n \cdot d)\), where \(n\) represents the number of elements and \(d\) represents the number of digits.
 \end{document}
