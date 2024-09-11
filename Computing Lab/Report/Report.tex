@@ -35,20 +35,24 @@
 
 \section*{Introduction}
 \begin{justify}
-In today’s world, conversational interfaces are essential for making interactions with technology easier and more natural. They use smart technology to chat with users, understand their needs, and provide helpful responses. In this project we want to develop a conversational interface for a used car price predictor model.  The latest statistics show that the demand for used cars has increased significantly.  The average consumer may not have enough knowledge and information needed to accurately evaluate the price of a car they wish to buy, which can leave them vulnerable to being scammed. This is where price prediction using Machine Learning or Deep Learning becomes significant. This will give consumers a clear picture of current market prices and trends. 
+In today’s world, conversational interfaces are essential for making interactions with technology more easier and more natural. They use innovative technology to chat with users, understand their needs, and provide helpful responses. 
+\newline
+
+The latest statistics reveal a significant increase in the demand for used cars. As this market grows, many consumers face the challenge of accurately evaluating car prices due to a need for knowledge and information. This is where price prediction using Machine Learning  becomes significant. 
 \newline
 
 The main goal of this project is to develop a conversational interface which will interact with the user to get the necessary parameters for the prediction model. The prediciton model will generate the car price which will be displayed to the user through the interface.
 \newline
 
-The motive of the project is to enhance user experience with the help of a conversational interface. This interface will interact with users to gather all the necessary information for making accurate predictions.
 
 \end{justify}
 
 \section*{Problem Statement and Objectives}
 \begin{justify}
-Estimating the price of a used car can be complex, with various factors influencing its value. Traditional methods often require users to input information manually, which can be confusing and inefficient. This can lead to inaccurate estimates and a frustrating user experience.
-There are various parameters, such as mileage, kilometers driven, engine capacity, fuel type, etc., that must be considered to accurately predict prices. The available data may contain duplicates and outliers, making it necessary to clean the data before using it to train the models. 
+Predicting the price of used cars using Machine Learning model requires large number of features and parameters such as car manufacturer, model, year, mileage and kilometres driven. Traditional methods for evaluating car prices often involve filling out forms.It can be a confusing and less interactive process for consumers to manually input different details which leads to a frustrating user experience. 
+\newline
+
+To offer a more user-friendly experience, this project aims to develop a chatbot that integrates with the price prediction model. This interface will guide users through a step-by-step process to collect the necessary car details
 
 
 \end{justify}
@@ -65,26 +69,25 @@ There are various parameters, such as mileage, kilometers driven, engine capacit
     \label{fig:your-label}
 \end{figure}
 \vspace{\baselineskip} 
-The first phase of the project is to find an appropriate dataset and perform data preprocessing. Datasets can be accessed from various websites, such as Kaggle. Python libraries, including Pandas and NumPy, can be used for this preprocessing. 
-\newline
+\begin{itemize}
+\item The first phase of the project is to find an appropriate dataset and perform data preprocessing. Datasets can be accessed from various websites, such as Kaggle. Python libraries, including Pandas and NumPy, can be used for this preprocessing. 
 
-The second phase of the project is to train the model. The Scikit-learn library can be used for implementing machine learning regression algorithms, while TensorFlow and Keras can be used for training the dataset using neural networks.
-\newline
+\item The second phase of the project is to train the model. The Scikit-learn library can be used for implementing machine learning regression algorithms.
 
-The third phase of the project is to compare the performance of different algorithms using performance metrics such as Mean Absolute Error (MAE) and select the most accurate algorithm. This chosen algorithm will then be used to train the final model.
-\newline
 
-The fourth phase of the project is to develop the Conversational Interfaces. NLP tools like Rasa can be used for this.
-\newline
-\newline
-The fifth phase focuses on developing the frontend of the website, which involves designing and implementing the user interface (UI) for the conversational interface. This will include a Chat Interface: A conversational UI where users can interact with the system through natural dialogue. This interface will guide users in providing necessary details about their cars and receiving price predictions. The UI can be implemented using web development tools such as HTML, CSS, JavaScript, and React.js
-\newline
+\item The third phase of the project is to compare the performance of different algorithms using performance metrics such as Mean Absolute Error (MAE) and select the most accurate algorithm. 
 
-The sixth phase of the project is to develop the backend of the website. This can be implemented using Python frameworks such as Flask or Django.
-\newline
 
-The seventh and final phase of the project involves integrating the frontend and backend through API calls. Following integration, testing will be conducted using various test cases. Finally, documentation for the project will be prepared.
+\item The fourth phase of the project is to develop the Conversational Interfaces. Open-source frameworks like Rasa can be used to develop the conversational interface, utilizing NLP techniques to process user input, extract intents and entities from the conversation, and generate appropriate replies. 
 
+\item The fifth phase focuses on developing the frontend of the website, which involves designing and implementing the user interface (UI) for the conversational interface. This will include a Chat Interface: A conversational UI where users can interact with the system through natural dialogue. This interface will guide users in providing necessary details about their cars and receiving price predictions. The UI can be implemented using web development tools such as HTML, CSS, JavaScript, and React.js
+
+
+\item The sixth phase of the project is to develop the backend of the website. This can be implemented using Python frameworks such as Flask or Django.
+
+
+\item The seventh and final phase of the project involves integrating the frontend and backend through API calls. Following integration, testing will be conducted using various test cases. Finally, documentation for the project will be prepared.
+\end{itemize}
 \newpage
 \section*{Exepected Outcomes}
 	\begin{itemize}
