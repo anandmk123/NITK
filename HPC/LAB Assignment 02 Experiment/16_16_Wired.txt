@@ -1,0 +1,12 @@
+% Total received packets: 11723
+% Total received flits: 46899
+% Received/Ideal flits Ratio: 1.01777
+% Average wireless utilization: 0
+% Global average delay (cycles): 25.4182
+% Max delay (cycles): 103
+% Network throughput (flits/cycle): 5.211
+% Average IP throughput (flits/cycle/IP): 0.0203555
+% Total energy (J): 0.000494205
+% 	Dynamic energy (J): 9.71848e-06
+% 	Static energy (J): 0.000484487
+
