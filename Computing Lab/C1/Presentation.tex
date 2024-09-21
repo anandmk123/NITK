@@ -57,19 +57,22 @@
 
 % Slide: Literature Survey with Table
 \begin{frame}[t]{Literature Survey}
-    \small % Reduce font size for table content
+    \footnotesize % Further reduce font size for table content
     \resizebox{\textwidth}{!}{  % Rescale the table to fit the slide
     \begin{tabular}{|c|m{4cm}|c|m{5cm}|}
         \hline
         \textbf{S.No.} & \textbf{Title} & \textbf{Year} & \textbf{Methodology} \\ \hline
-        1 & Prediction of Used Car Prices Using Artificial Neural Networks & 2022 & Artificial Neural Networks (ANN) for price prediction \\ \hline
-        2 & Conversational AI Unleashed: A Comprehensive Review of NLP-Powered Chatbot Platforms & 2023 & NLP-powered chatbot platform for natural language interaction \\ \hline
-        3 & Predicting the Sale Price of Pre-Owned Vehicles with the Ensemble ML Model & 2023 & Ensemble methods using Random Forest for price prediction \\ \hline
-        4 & Challenges and Solutions in Conversational AI & 2017 & End-to-end conversational AI architecture \\ \hline
-        5 & Improving User Experience in Conversational Systems & 2018 & Enhancing chatbot systems with personalized responses \\ \hline
+        1 & Prediction of Used Car Prices Using Artificial Neural Networks and Machine Learning & 2022 & Deep Neural Networks, Linear Regression, Random Forest Algorithm \\ \hline
+        2 & Predicting the Sale Price of Pre-Owned Vehicles with the Ensemble ML Model & 2023 & Linear Regression Model, Random Forest Regression, Gradient Boosting Tree (GBT) Regression Model \\ \hline
+        3 & An Overview of Chatbot Technology & 2020 & Rule-Based Model Chatbots, Generative Models. Development platforms can be open-source, such as RASA. \\ \hline
+        4 & Conversational AI Unleashed: A Comprehensive Review of NLP-Powered Chatbot Platforms & 2023 & Rule-Based Systems, Generative Models. \\ \hline
+        5 & Framework for Design and Implementation of Chat Support System using Natural Language Processing & 2023 & The chatbot is developed in Django web framework and spaCy NLP library for Python. \\ \hline
+        6 & Chatbot for Mental Health Support using NLP & 2023 & The proposed system is an Android application that uses the power of deep learning and natural language processing. \\ \hline
     \end{tabular}
     }
 \end{frame}
+
+
 
 \begin{frame}[t]{Proposed Methodology}
     \begin{itemize}
@@ -80,10 +83,60 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}[t]{Finalized Design of Solution}
+    \begin{itemize}
+        \item \textbf{System Architecture:}
+	\begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.8\textwidth]{Flowchart2.png}
+    \end{figure}
+        \begin{itemize}
+            \item \textbf{Frontend:} A website providing a chat interface for users to interact with the system.
+            \item \textbf{Backend:} A server that processes user inputs, communicates with the Rasa NLP engine and the prediction model, and handles responses.
+            \item \textbf{NLP Engine:} Processes natural language inputs, extracts intents and entities, and manages conversation flow.
+            \item \textbf{Prediction Model:} A machine learning model that predicts the price of the car based on the extracted data from user inputs.
+        \end{itemize}
+    \end{itemize}
 
+	
+\end{frame}
 
+\begin{frame}[t]{Experimental Setup}
+    \begin{itemize}
+        \item Frontend: HTML, CSS, JavaScript for creating a responsive chat interface.
+        \item Backend: Python (Flask or Django) to handle interactions between the frontend, Rasa NLP engine, and the prediction model.
+        \item NLP Engine: Rasa will be used to implement a rule-based chatbot. It will process natural language inputs to extract intents and entities, and trigger predefined actions.
+        \begin{itemize}
+            \item \textbf{Intents:} User intents include providing car details, requesting price prediction, and asking for help or guidance.
+            \item \textbf{Entities:} The chatbot will extract entities such as car make, model, year, mileage, and kilometers driven from the conversation.
+            \item \textbf{Actions:} Actions include validating user input, passing car details to the prediction model, and returning the predicted price.
+        \end{itemize}
+        \item Prediction Model: Machine learning model (random forest or any other regression model) for predicting used car prices based on user inputs.
+        \item Dataset: The dataset for training the prediction model will be sourced from Kaggle.
+    \end{itemize}
+\end{frame}
 
-% Continue with the rest of the content (solution, phases, expected outcomes, etc.)
-% ...
+\begin{frame}[t]{Expected Outcomes}
+    \begin{itemize}
+        \item A user-friendly conversational interface that will guide users through the process of providing necessary car details in a natural and interactive manner.
+        \item Successful integration of the Rasa rule-based chatbot for handling user inputs, understanding intents, and extracting entities such as car make, model, year, and mileage.
+        \item An accurate machine learning model capable of predicting used car prices based on the extracted details.
+        \item Seamless communication between the frontend, backend, and prediction model to provide real-time price estimates to users.
+        \item A comprehensive, interactive system that enhances user experience by simplifying the process of car price prediction through conversational interface.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]{Conclusion and Future Work}
+    \begin{itemize}
+        \item This project successfully integrates a conversational interface with a used car price prediction model, making the user experience more interactive and efficient.
+        \item \textbf{Future Work:}
+        \begin{itemize}
+            \item Implement a more powerful chatbot using machine learning algorithms to allow for adaptive conversation flows.
+            \item Introduce voice command functionality for hands-free user interaction.
+            \item Add support for multiple languages using translation functionality to cater to a global audience.
+            \item Explore advanced machine learning techniques and larger datasets to further improve price prediction accuracy.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
 
 \end{document}
