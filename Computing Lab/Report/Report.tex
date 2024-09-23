@@ -29,27 +29,31 @@
 
     \vspace*{0.1in}
 
-    {\Huge\bfseries Pre-owned Car Price Prediction\par}
+    {\Huge\bfseries Conversational Used Car Price Predictor\par}
     \vspace{1in}
 \end{center}
 
 \section*{Introduction}
 \begin{justify}
-
-In today's world, where people’s living standards have greatly improved, cars have become a necessary part of life. The latest statistics show that the demand for used cars has increased significantly.  The average consumer may not have enough knowledge and information needed to accurately evaluate the price of a car they wish to buy, which can leave them vulnerable to being scammed. This is where price prediction using Machine Learning or Deep Learning becomes significant. This will give consumers a clear picture of current market prices and trends.  
+In today’s world, conversational interfaces are essential for making interactions with technology more easier and more natural. They use innovative technology to chat with users, understand their needs, and provide helpful responses. 
 \newline
 
-The main goal of this project is to design a prediction model using the most accurate algorithm, which will be selected after comparing various Machine Learning and Deep Learning algorithms. The project also includes designing a user-friendly website that will enable consumers to use the prediction model to estimate prices effortlessly.
+The latest statistics reveal a significant increase in the demand for used cars. As this market grows, many consumers face the challenge of accurately evaluating car prices due to a need for knowledge and information. This is where price prediction using Machine Learning  becomes significant. 
 \newline
 
-The motive of the project is to study and analyze various machine learning and deep learning algorithms, as well as to gain a clear understanding of different aspects of web development.
+The main goal of this project is to develop a conversational interface which will interact with the user to get the necessary parameters for the prediction model. The prediciton model will generate the car price which will be displayed to the user through the interface.
+\newline
+
 
 \end{justify}
 
 \section*{Problem Statement and Objectives}
 \begin{justify}
+Predicting the price of used cars using Machine Learning model requires large number of features and parameters such as car manufacturer, model, year, mileage and kilometres driven. Traditional methods for evaluating car prices often involve filling out forms.It can be a confusing and less interactive process for consumers to manually input different details which leads to a frustrating user experience. 
+\newline
 
-There are various parameters, such as mileage, kilometers driven, engine capacity, fuel type, etc., that must be considered to accurately predict prices. Therefore, it is challenging to calculate the price using traditional mathematical algorithms. Several Machine Learning regression algorithms, such as Linear Regression, Decision Tree, and Deep Learning, can be applied to these types of problems. However, identifying the best algorithm is a challenging task. The main objective of the project is to study, analyze, and compare these algorithms to build the most accurate model. The available data may contain duplicates and outliers, making it necessary to clean the data before using it to train the models. Another objective is to design a user-friendly, responsive, and fast-performing website that allows consumers to easily predict prices based on their requirements.
+To offer a more user-friendly experience, this project aims to develop a chatbot that integrates with the price prediction model. This interface will guide users through a step-by-step process to collect the necessary car details
+
 
 \end{justify}
 
@@ -60,44 +64,51 @@ There are various parameters, such as mileage, kilometers driven, engine capacit
 \begin{justify}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=.8\textwidth]{./projectflow1.png}
+    \includegraphics[width=.8\textwidth]{./Flowchart2.png}
     \caption{Solution Flowchart}
     \label{fig:your-label}
 \end{figure}
 \vspace{\baselineskip} 
-The first phase of the project is to find an appropriate dataset and perform data preprocessing. Datasets can be accessed from various websites, such as Kaggle. Python libraries, including Pandas and NumPy, can be used for this preprocessing. 
-\newline
+\begin{itemize}
+\item The first phase of the project is to find an appropriate dataset and perform data preprocessing. Datasets can be accessed from various websites, such as Kaggle. Python libraries, including Pandas and NumPy, can be used for this preprocessing. 
 
-The second phase of the project is to train the model. The Scikit-learn library can be used for implementing machine learning regression algorithms, while TensorFlow and Keras can be used for training the dataset using neural networks.
-\newline
+\item The second phase of the project is to train the model. The Scikit-learn library can be used for implementing machine learning regression algorithms.
 
-The third phase of the project is to compare the performance of different algorithms using performance metrics such as Mean Absolute Error (MAE) and select the most accurate algorithm. This chosen algorithm will then be used to train the final model.
-\newline
 
-The fourth phase of the project is to develop the frontend of the website. This includes designing the UI, which will feature various input fields for parameters such as car model, year of registration, engine capacity, mileage, kilometers driven, etc. Additionally, there will be a "Predict" button that, when clicked, will process the inputs and present the results to the user. The designed UI can then be implemented using web development tools such as HTML, CSS, JavaScript, and React.js
-\newline
+\item The third phase of the project is to compare the performance of different algorithms using performance metrics such as Mean Absolute Error (MAE) and select the most accurate algorithm. 
 
-The fifth phase of the project is to develop the backend of the website. This can be implemented using Python frameworks such as Flask or Django.
-\newline
 
-The sixth and final phase of the project involves integrating the frontend and backend through API calls. Following integration, testing will be conducted using various test cases. Finally, documentation for the project will be prepared.
+\item The fourth phase of the project is to develop the Conversational Interfaces. Open-source frameworks like Rasa can be used to develop the conversational interface, utilizing NLP techniques to process user input, extract intents and entities from the conversation, and generate appropriate replies. 
 
+\item The fifth phase focuses on developing the frontend of the website, which involves designing and implementing the user interface (UI) for the conversational interface. This will include a Chat Interface: A conversational UI where users can interact with the system through natural dialogue. This interface will guide users in providing necessary details about their cars and receiving price predictions. The UI can be implemented using web development tools such as HTML, CSS, JavaScript, and React.js
+
+
+\item The sixth phase of the project is to develop the backend of the website. This can be implemented using Python frameworks such as Flask or Django.
+
+
+\item The seventh and final phase of the project involves integrating the frontend and backend through API calls. Following integration, testing will be conducted using various test cases. Finally, documentation for the project will be prepared.
+\end{itemize}
 \newpage
 \section*{Exepected Outcomes}
 	\begin{itemize}
+		\item The conversational interface will effectively interact with users, guiding them through the process of providing necessary car details in a natural and engaging manner.
 		\item A predictive model that provides accurate predictions based on user inputs.
-		\item A reliable and responsive website that accurately displays the expected price of a pre-owned car based on various input features.
 		\item Successful integration of the frontend and backend.
 
 	 \end{itemize}
 
 \section*{Tentative Timeline}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=.8\textwidth]{./timeline.png}
-    \caption{Timeline}
-    \label{fig:your-s}
-\end{figure}
+\begin{tabular}{|c|p{7cm}|c|}
+\hline
+\textbf{PHASE} & \textbf{DESCRIPTION} & \textbf{TIMELINE} \\ \hline
+1 & Finalizing project Design \& Module division & September 4 - September 10 \\ \hline
+2 & Dataset collection and pre-processing & September 11 - September 18 \\ \hline
+3 & Train Model and Compare Algorithm Performance & September 19 - September 30 \\ \hline
+4 & Conversational Interface development & October 1 - October 19 \\ \hline
+5 & Frontend Development & October 20 - November 4 \\ \hline
+6 & Backend Development & November 5 - November 16 \\ \hline
+7 & Integration, Testing, and Documentation & November 17 - November 20 \\ \hline
+\end{tabular}
 
 
 \begin{thebibliography}{9}
@@ -107,6 +118,9 @@ J. Varshitha, K. Jahnavi, and C. Lakshmi, "Prediction Of Used Car Prices Using A
 
 \bibitem{kathiravan2023}
 M. Kathiravan, M. Ramya, S. Jayanthi, V. V. Reddy, L. Ponguru, and N. Bharathiraja, "Predicting the Sale Price of Pre-Owned Vehicles with the Ensemble ML Model," \textit{2023 4th International Conference on Electronics and Sustainable Communication Systems (ICESC)}, Coimbatore, India, 2023, pp. 1793-1797, doi: 10.1109/ICESC57686.2023.10192988.
+
+\bibitem{kathiravan2024}
+Shubham Chaurasia , Shubha Jain , Hari Om Vishwkarma , Nishant Singh "Conversational AI Unleashed: A Comprehensive Review of NLP-Powered Chatbot Platforms" Iconic Research And Engineering Journals Volume 7 Issue 3 2023 Page 1-8
 
 
 \end{thebibliography}

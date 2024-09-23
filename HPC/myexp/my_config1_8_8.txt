@@ -1,0 +1,18 @@
+Loading configuration from file "../config_examples/my_config.yaml"... Done
+Loading power configurations from file "power.yaml"... Done
+Reset for 1000 cycles...  done! 
+ Now running for 10000 cycles...
+Noxim simulation completed. (11000 cycles executed)
+
+% Total received packets: 11308
+% Total received flits: 45239
+% Received/Ideal flits Ratio: 0.981749
+% Average wireless utilization: 0
+% Global average delay (cycles): 18.2963
+% Max delay (cycles): 94
+% Network throughput (flits/cycle): 5.02656
+% Average IP throughput (flits/cycle/IP): 0.0785399
+% Total energy (J): 3.8123e-05
+% 	Dynamic energy (J): 2.59829e-06
+% 	Static energy (J): 3.55247e-05
+
