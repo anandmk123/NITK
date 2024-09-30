@@ -1,64 +1,96 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-// Function to print the LIS
-void printSub(int arr[], int n, int dp[], int maxLengthIndex) {
-    int lis[maxLengthIndex + 1];
-    int length = dp[maxLengthIndex];
-    
-    // Reconstruct the LIS by backtracking through dp[]
-    for (int i = maxLengthIndex; i >= 0; i--) {
-        if (dp[i] == length) {
-            lis[length - 1] = arr[i];
-            length--;
-        }
-    }
-    
-    // Print the LIS
-    printf("Longest Increasing Subsequence: ");
-    for (int i = 0; i < dp[maxLengthIndex]; i++) {
-        printf("%d ", lis[i]);
-    }
-    printf("\n");
-}
+/**
+ * This function finds the Longest Increasing Subsequence (LIS) using dynamic programming.
+ * It calculates the length of LIS for each element by considering all previous elements and 
+ * determining if the current element can extend the sequence. The sequence is then reconstructed.
+ * Time complexity: O(n^2)
+ * 
+ **/
+int* longestIncreasingSubsequence(int arr[], int size, int* resultSize)
+{
+    // dp[i] stores the length of the longest increasing subsequence ending at index i.
+    // predecessor[i] stores the index of the previous element in the sequence for reconstruction.
+    int* dp = (int*)malloc(size * sizeof(int));
+    int* predecessor = (int*)malloc(size * sizeof(int));
 
-// Function to find the length of LIS and the subsequence
-void longestSub(int arr[], int n) {
-    int dp[n];        // Array to store the length of LIS ending at each index
-    int maxLength = 1; // Length of the longest subsequence found
-    int maxLengthIndex = 0; // Index of the last element of the longest subsequence
-    
-    // Initialize all dp[] values to 1 because every element is an increasing subsequence of length 1
-    for (int i = 0; i < n; i++) {
-        dp[i] = 1;
+    for (int i = 0; i < size; i++) {
+        dp[i] = 1;            // Initialize LIS length for each element as 1 (itself)
+        predecessor[i] = -1;   // Initialize no predecessor for each element
     }
-    
-    // Build the dp[] array
-    for (int i = 1; i < n; i++) {
-        for (int j = 0; j < i; j++) {
-            if (arr[i] > arr[j] && dp[i] < dp[j] + 1) {
+
+    // Compute LIS for each element by comparing it with previous elements.
+    // If arr[i] > arr[j], update dp[i] and track the predecessor.
+    for (int i = 1; i < size; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            if (arr[i] > arr[j] && dp[i] < dp[j] + 1)
+            {
                 dp[i] = dp[j] + 1;
+                predecessor[i] = j; // Update the predecessor of element at i
             }
         }
-        
-        // Track the maximum length and the index of the last element of the LIS
-        if (dp[i] > maxLength) {
+    }
+
+    // Find the maximum value in dp[] which represents the length of the LIS.
+    int maxLength = -1, lastPos = -1;
+    for (int i = 0; i < size; i++)
+    {
+        if (maxLength < dp[i])
+        {
             maxLength = dp[i];
-            maxLengthIndex = i;
+            lastPos = i;  // Track the index of the last element in the LIS
         }
     }
-    
-    // Print the length of the LIS
+
     printf("Length of LIS: %d\n", maxLength);
+
+    // Reconstruct the LIS by following the predecessor array.
+    int* subsequence = (int*)malloc(maxLength * sizeof(int));
+    int index = maxLength - 1;
+    while (lastPos != -1)
+    {
+        subsequence[index--] = arr[lastPos];
+        lastPos = predecessor[lastPos];
+    }
+
+    *resultSize = maxLength;  // Update the size of the resulting LIS
     
-    // Reconstruct and print the actual LIS
-    printSub(arr, n, dp, maxLengthIndex);
+    // Free dynamically allocated memory
+    free(dp);
+    free(predecessor);
+
+    return subsequence;
 }
 
-int main() {
-    int arr[] = {50, 3, 10, 7, 40, 80};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    
-    longestSub(arr, n);
-    
+int main()
+{
+    int n;
+    printf("Enter size of the array: ");
+    scanf("%d", &n);
+
+    int* arr = (int*)malloc(n * sizeof(int));
+    printf("Enter the elements: ");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int resultSize;
+    int* result = longestIncreasingSubsequence(arr, n, &resultSize);
+
+    printf("Longest Increasing Subsequence: ");
+    for (int i = 0; i < resultSize; i++)
+    {
+        printf("%d ", result[i]);
+    }
+    printf("\n");
+
+    // Free dynamically allocated memory
+    free(arr);
+    free(result);
+
     return 0;
 }

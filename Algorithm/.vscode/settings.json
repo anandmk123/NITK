@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "Q3_inversion.C": "cpp"
+        "Q3_inversion.C": "cpp",
+        "chrono": "c"
     }
 }
