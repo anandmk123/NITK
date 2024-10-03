@@ -76,9 +76,11 @@
         \centering
         \includegraphics[width=0.7\linewidth]{Proposed.png}  % Replace 'your_image.png' with your image file
     \begin{itemize}
-            \item Conversational Interface: The proposed system will integrate a chatbot that will act as the primary interface for user interaction. Instead of filling out forms, users will engage in a natural language conversation to provide the necessary details about their car.
-	 \item Guided Data Collection: The chatbot will guide users step by step, asking questions about the car’s make, model, year, mileage, condition, and other relevant factors in a user-friendly, conversational manner.
-
+    \item \textbf{Conversational Interface:} A chatbot will serve as the main interaction tool, enabling users to enter car details via natural conversation instead of forms.
+    
+    \item \textbf{Guided Data Collection:} The chatbot will gather car details (model, year, mileage, etc.) step by step, ensuring ease of use.
+    
+    \item \textbf{Handling Queries:} The chatbot will also respond to general queries like "How is the price calculated?" or "What factors affect my car's value?"
 
     \end{itemize}
 \end{frame}
@@ -106,23 +108,24 @@
     \begin{itemize}
         \item Frontend: HTML, CSS, JavaScript for creating a responsive chat interface.
         \item Backend: Python framework (Flask or Django) to handle interactions between the frontend, Rasa NLP engine, and the prediction model.
-        \item NLP Engine: Rasa will be used to implement a rule-based chatbot. It will process natural language inputs to extract intents and entities, and trigger predefined actions.
-        \begin{itemize}
-            \item \textbf{Intents:} User intents include providing car details, requesting price prediction, and asking for help or guidance.
-            \item \textbf{Entities:} The chatbot will extract entities such as car make, model, year, mileage, and kilometers driven from the conversation.
-            \item \textbf{Actions:} Actions include validating user input, passing car details to the prediction model, and returning the predicted price.
-        \end{itemize}
-        \item Prediction Model: Machine learning model (random forest or any other regression model) for predicting used car prices based on user inputs.
-        \item Dataset: The dataset for training the prediction model will be sourced from Kaggle.
+	\item NLP Engine: Rasa will be used to implement a rule-based chatbot. It will process natural language inputs to extract intents and entities, and trigger predefined actions.
+	    \begin{itemize}
+	        \item Intents: User intents include providing car details, requesting price prediction, asking for help or guidance, and asking general questions.
+	        \item Entities: The chatbot will extract entities such as car make, model, year, mileage, and kilometers driven from the conversation.
+	        \item Actions: Actions include validating user input, passing car details to the prediction model, returning the predicted price, and responding to general queries.
+	    \end{itemize}
+	\item Prediction Model: A machine learning model (such as Random Forest or another regression model) will be used to predict used car prices based on user inputs, utilizing a dataset sourced from Kaggle for training.
+
     \end{itemize}
 \end{frame}
 
 \begin{frame}[t]{Expected Outcomes}
     \begin{itemize}
-        \item A user-friendly conversational interface that will guide users through the process of providing necessary car details in a natural and interactive manner.
-        \item Successful integration of the Rasa rule-based chatbot for handling user inputs, understanding intents, and extracting entities such as car make, model, year, and mileage.
-        \item An accurate machine learning model capable of predicting used car prices based on the extracted details.
-        \item Seamless communication between the frontend, backend, and prediction model to provide real-time price estimates to users.
+	\item A user-friendly conversational interface that guides users through providing necessary car details in a natural and interactive manner.
+	\item Successful integration of the Rasa rule-based chatbot for handling user inputs, understanding intents, extracting entities such as car make, model, year, and mileage, and responding to general questions.
+	\item A machine learning model capable of predicting used car prices based on the extracted details.
+	\item Seamless communication between the frontend, backend, and prediction model to provide real-time price estimates to users.
+
     \end{itemize}
 \end{frame}
 
