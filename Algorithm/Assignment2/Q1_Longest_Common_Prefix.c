@@ -3,39 +3,47 @@
 #include <stdlib.h>
 
 /**
- * This function implements a divide-and-conquer approach to find the longest common prefix
+ * This function compares two strings and returns their longest common prefix.
+ */
+char* commonPrefix(char* left, char* right) {
+    int i = 0;
+    int limit = (strlen(left) < strlen(right)) ? strlen(left) : strlen(right);
+
+    // Compare the two strings and find the common prefix
+    while (i < limit && left[i] == right[i])
+        i++;
+
+    // Allocate memory for the result and store the common prefix
+    char* result = (char*)malloc((i + 1) * sizeof(char)); // +1 for null terminator
+    strncpy(result, left, i);
+    result[i] = '\0';
+
+    return result;
+}
+
+/**
+ * The function implements a divide-and-conquer approach to find the longest common prefix
  * in an array of strings.
  * Time complexity is O(m log n), where 'm' is the length of the longest string
  * and 'n' is the number of strings in the array.
  */
 char* findLongestCommonPrefix(char* strings[], int start, int end) {
-    // If more than one string is present, recursively divide the array
-    if (end > start) {
-        /**
-         * Divide the array into two halves by calculating the midpoint.
-         */
-        int mid = (start + end) / 2;
-
-        // Find the longest common prefix in the left and right halves
-        char* prefixLeft = findLongestCommonPrefix(strings, start, mid);
-        char* prefixRight = findLongestCommonPrefix(strings, mid + 1, end);
-
-        /**
-         * Compare the two prefixes and return the common part between them.
-         */
-        int i = 0, limit = (strlen(prefixLeft) < strlen(prefixRight)) ? strlen(prefixLeft) : strlen(prefixRight);
-        while (i < limit && prefixLeft[i] == prefixRight[i])
-            i++;
-
-        // Store the result (common prefix) in a static buffer
-        static char result[100];
-        strncpy(result, prefixLeft, i);
-        result[i] = '\0';
-        return result;
+    // Base case: if only one string, return it as the prefix
+    if (start == end) {
+        return strings[start];
     }
 
-    // Base case: return the string when only one string is left
-    return strings[start];
+    // Divide the array into two halves
+    int mid = (start + end) / 2;
+
+    // Recursively find the longest common prefix in both halves
+    char* prefixLeft = findLongestCommonPrefix(strings, start, mid);
+    char* prefixRight = findLongestCommonPrefix(strings, mid + 1, end);
+
+    // Find the common prefix between the two halves
+    char* common = commonPrefix(prefixLeft, prefixRight);
+
+    return common;
 }
 
 int main() {
@@ -60,9 +68,17 @@ int main() {
     }
 
     // Find and print the longest common prefix
-    printf("Longest Common Prefix: %s\n", findLongestCommonPrefix(strings, 0, numStrings - 1));
+    char* result = findLongestCommonPrefix(strings, 0, numStrings - 1);
 
-    // Free allocated memory for each string
+    // Handle the case of no common prefix
+    if (strlen(result) == 0) {
+        printf("No common prefix exists.\n");
+    } else {
+        printf("Longest Common Prefix: %s\n", result);
+    }
+
+    // Free allocated memory for each string and the result
+    free(result);
     for (i = 0; i < numStrings; i++) {
         free(strings[i]);
     }

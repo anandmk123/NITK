@@ -82,6 +82,11 @@ int main() {
     }
     printf("\n");
 
+    for (int i = 0; i < size; i++) {
+        printf("%d, ", array[i]);   // Display the counts for each element
+    }
+    printf("\n");
+
     // Free dynamically allocated memory
     free(array);
     free(output);
