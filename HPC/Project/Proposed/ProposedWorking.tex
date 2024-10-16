@@ -161,7 +161,24 @@ Random \\
 \end{algorithm}
 
 \subsection{Design of Proposed Method}
-Algorithm 2 describes the flow of the proposed method. Step 1 involves dataset generation using the PAT-noxim simulator, as described in Algorithm 1. The dataset is normalized to ensure that all the parameters equally contribute to the ML prediction. The duplicate data is removed to ensure the proposed model is trained on different data. The dataset is split into training (70\%), testing (15\%), and validation (15\%).
+Algorithm 2 describes the flow of the proposed method. Step One involves dataset generation using the PAT-Noxim simulator, as described in Algorithm 1. The dataset is normalized to ensure that all the parameters equally contribute to the ML prediction. The duplicate data is removed to ensure the proposed model is trained on different data. The dataset is split into training (70\%), testing (15\%), and validation (15\%).
+
+The proposed hybrid model includes ML components for Power and Area prediction and DL components for Temperature prediction. The training of the linear regression model minimizes the MSE between the predicted and actual values of power and area.
+
+\[
+MSE = \frac{1}{n} \sum_{i=1}^{n} \left( Y_i - \hat{Y_i} \right)^2
+\]
+
+Where:
+\begin{itemize}
+    \item \( Y_i \): Actual output
+    \item \( \hat{Y_i} \): Predicted output
+    \item \( n \): Number of samples
+\end{itemize}
+The ability of the model to predict power and area on unseen NoC configurations is evaluated using the MSE.
+The dataset is also trained on a decision tree algorithm to predict the power and area. The training phase involves splitting the dataset based on the most significant feature that separates the data most precisely. The MSE is used to calculate the ability of the model to predict accurately.
+
+
 
 
 \begin{algorithm}
