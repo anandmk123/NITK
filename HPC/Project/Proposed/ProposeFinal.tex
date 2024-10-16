@@ -30,7 +30,7 @@ Email: \{abhijithc.242cs003, anandmk.242cs008\}@nitk.edu.in}
 
 Machine learning (ML) algorithms are widely used in various real-time predictions, such as energy consumption prediction and weather forecasting. The Power, Area, and Temperature (PAT) prediction of Network-on-Chip can also leverage the ability of machine learning models. However, the lack of availability of a proper public dataset is a crucial issue. In addition, most existing studies focus on power, area, or thermal analysis independently. Frameworks involving simultaneous analysis of all three parameters are rare in current research.
 
-This work proposes a hybrid model that combines ML and DL algorithms. The ML component of the hybrid model uses algorithms such as linear regression and decision trees to predict area and power, which have a linear relationship with NoC parameters. The DL component of the model uses convolutional neural networks (CNNs) that learn complex nonlinear relationships in NoC to predict temperature. The algorithms can predict PAT values for unseen input NoC configuration based on their learning. The prediction of both models is combined to produce a single output in the hybrid model.
+This work proposes a hybrid model that combines ML and DL algorithms. The ML component of the hybrid model uses algorithms such as linear regression and decision trees to predict area and power, which have a linear relationship with NoC parameters. The DL component of the model uses convolutional neural networks (CNNs) that learn complex non-linear relationships in NoC to predict temperature. The algorithms can predict PAT values for unseen input NoC configuration based on their learning. The prediction of both models is combined to produce a single output in the hybrid model.
 
 \subsection{Linear Regression}
 
@@ -40,11 +40,11 @@ Linear regression is an ML algorithm that is used for predictions involving nume
 Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n + \epsilon
 \]
 
-where \( Y \) is the predicted output, \( X_1, X_2, \dots, X_n \) are the input features, \( \beta_0 \) is the intercept, \( \beta_1, \beta_2, \dots, \beta_n \) are the coefficients, and \( \epsilon \) is the error term. The coefficients of the equation are learned using Mean Squared Error (MSE), a loss function. In power, area, and thermal (PAT) prediction for networks-on-chip (NoC), linear regression can predict these metrics based on input parameters such as topology size, packet injection rate, and others. However, linear regression can only learn linear relationships between the input and output variables. Therefore, methods such as decision trees are needed to learn the complex and non-linear relationships that are present in NoC systems.
+where \( Y \) is the predicted output, \( X_1, X_2, \dots, X_n \) are the input features, \( \beta_0 \) is the intercept, \( \beta_1, \beta_2, \dots, \beta_n \) are the coefficients, and \( \epsilon \) is the error term. The coefficients of the equation are learned using Mean Squared Error (MSE), a loss function. In power, area, and thermal (PAT) prediction for networks-on-chip (NoC), linear regression can predict these metrics based on input parameters such as topology size, packet injection rate, etc. However, linear regression can only learn linear relationships between the input and output variables. Therefore, methods such as decision trees are needed to learn the complex and non-linear relationships that are present in NoC systems.
 
 \subsection{Decision Trees}
 
-Decision trees are powerful ML algorithms used for regression and classification tasks. These algorithms split the training dataset based on the most significant feature that separates the data most precisely. The internal nodes of the decision tree define the decision on an input feature, and the leaf node represents the predicted output value. Decision trees can find complex relationships between input and output variables as they are non-parametric. In power, area, and thermal prediction in NoC systems, these algorithms can learn complex relationships between NoC parameters. Decision trees also provide a visual structure that helps researchers understand which features impact the outputs most. However, these algorithms can result in an overfitted model with  increased generalization error. Genralization error can be reduced using techniques like pruning, making these algorithms perform well in large-scale NoC systems.
+Decision trees are powerful ML algorithms used for regression and classification tasks. These algorithms split the training dataset based on the most significant feature that separates the data most precisely. The internal nodes of the decision tree define the decision on an input feature, and the leaf node represents the predicted output value. Decision trees can find complex relationships between input and output variables as they are non-parametric. In power, area, and thermal prediction in NoC systems, these algorithms can learn complex relationships between NoC parameters. Decision trees also provide a visual structure that helps researchers understand which features impact the outputs most. However, these algorithms can result in an overfitted model with  increased generalization error. Generalization error can be reduced using techniques like pruning, making these algorithms perform well in large-scale NoC systems.
 
 \subsection{Convolutional Neural Networks}
 
@@ -174,8 +174,8 @@ Where:
     \item \( \hat{Y_i} \): Predicted output
     \item \( n \): Number of samples
 \end{itemize}
-The ability of the model to predict power and area on unseen NoC configurations is evaluated using the MSE.
-The dataset is also trained on a decision tree algorithm to predict the power and area. The training phase involves splitting the dataset based on the most significant feature that separates the data most precisely. The MSE is used to calculate the ability of the model to predict accurately. 
+The ability of the model to predict power and area on unseen NoC configurations are evaluated using the MSE.
+The dataset is also trained on a decision tree algorithm to predict the power and area. This training phase involves splitting the dataset based on the most significant feature that separates the data most precisely. The MSE is used to calculate the ability of the model to predict accurately. 
 
 The CNN model is designed to train the dataset for temperature prediction. The architecture consists of the following layers:
 
@@ -203,6 +203,7 @@ The CNN model is designed to train the dataset for temperature prediction. The a
 	f(x) = x
 	\]
 \end{itemize}
+The predicted power area and temperature are combined, and the model is tested using a test dataset. The flowchart of the proposed method is given in Fig. 1.
 
 
 \begin{algorithm}
@@ -242,14 +243,20 @@ The CNN model is designed to train the dataset for temperature prediction. The a
 \end{algorithmic}
 \end{algorithm}
 
-
-
-
 \begin{figure}[h]  % Begin the figure environment
     \centering
     \includegraphics[width=0.8\linewidth]{Proposed.png}  % Specify the path to your image
     \caption{Illustration of the Proposed Framework}  % Add a caption for the image
     \label{fig:proposed_framework}  % Add a label for referencing the image
 \end{figure}
+
+\subsection*{Conclusion}
+
+This work proposes a hybrid model that combines ML and DL algorithms. The ML component uses linear regression and decision trees to predict area and power, and the DL component uses CNN to predict temperature. The dataset is generated using PAT-noxim with different NoC parameters. The trained model is evaluated with unseen data, and prediction accuracy is calculated.  
+
+
+
+
+
 
 \end{document}
