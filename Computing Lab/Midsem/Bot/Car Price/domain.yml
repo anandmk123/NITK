@@ -1,0 +1,51 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - inform_brand
+  - inform_model
+
+entities:
+  - brand
+  - model
+
+slots:
+  brand:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brand
+
+  model:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: model
+
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm here to help you predict the price of your car. Let's get started!"
+  utter_goodbye : 
+  - text: "Bye bye! Have a great day!"
+  utter_iamabot:
+  - text: "I am chatbot"
+  utter_ask_brand:
+    - text: "What is the brand of your car?"
+  utter_ask_model:
+    - text: "What model of the car do you have?"
+
+
+actions:
+  - action_store_brand
+  - action_store_model
+  - action_display_car_details
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

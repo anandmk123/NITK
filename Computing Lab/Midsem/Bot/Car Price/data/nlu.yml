@@ -1,0 +1,60 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+    # NLU data for informing the brand
+  - intent: inform_brand
+    examples: |
+      - The brand is [Maruti](brand)
+      - My car brand is [Ford](brand)
+      - The brand is [Mahindra](brand)
+      - The brand is [Volkswagen](brand)
+
+  # NLU data for informing the model
+  - intent: inform_model
+    examples: |
+      - The model is [Alto](model)
+      - My car model is [Grand](model)
+      - My car model is [Wagon R](model)
+      - The car model is [i10](model)
+      - The model is [Verna](model)
+      - My car model is [Baleno](model)
+      - The car model is [Creta](model)
+      - The model is [KWID](model)
+      - My car model is [Amaze](model)
+      - The car model is [Polo](model)
