@@ -1,0 +1,137 @@
+version: "3.1"
+
+intents:
+  - greet
+  - provide_brand
+  - provide_model
+  - provide_year_of_manufacture
+  - provide_km_driven
+  - provide_fuel_type
+  - provide_transmission_type
+  - provide_mileage
+  - provide_engine
+  - provide_max_power
+  - provide_seats
+  - ask_price_prediction
+  - goodbye
+  - affirm
+
+entities:
+  - brand
+  - model
+  - year_of_manufacture
+  - km_driven
+  - fuel_type
+  - transmission_type
+  - mileage
+  - engine
+  - max_power
+  - seats
+
+slots:
+  brand:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: brand
+
+  model:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: model
+
+  year_of_manufacture:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: year_of_manufacture
+
+  km_driven:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: km_driven
+
+  fuel_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: fuel_type
+
+  transmission_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: transmission_type
+
+  mileage:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: mileage
+
+  engine:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: engine
+
+  max_power:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: max_power
+
+  seats:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: seats
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm here to help you predict the price of your car. Let's get started!"
+  utter_ask_brand:
+    - text: "What is the brand of your car?"
+  utter_ask_model:
+    - text: "What model of the car do you have?"
+  utter_ask_year_of_manufacture:
+    - text: "What is the year of manufacture?"
+  utter_ask_km_driven:
+    - text: "How many kilometers has it driven?"
+  utter_ask_fuel_type:
+    - text: "What type of fuel does it use?"
+  utter_ask_transmission_type:
+    - text: "Is it automatic or manual transmission?"
+  utter_ask_mileage:
+    - text: "What is the mileage of the car?"
+  utter_ask_engine:
+    - text: "What is the engine capacity?"
+  utter_ask_max_power:
+    - text: "What is the maximum power of the car?"
+  utter_ask_seats:
+    - text: "How many seats does it have?"
+  utter_price_prediction:
+    - text: "Let me calculate the price based on the provided details."
+  utter_goodbye:
+    - text: "Bye"
+
+actions:
+  - action_predict_car_price
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  

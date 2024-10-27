@@ -1,0 +1,39 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_brand
+  - intent: inform_brand
+  - action: action_store_brand
+  - action: utter_ask_model
+  - intent: inform_model
+  - action: action_store_model
+  - action: utter_ask_year_of_manufacture
+  - intent: inform_year_of_manufacture
+  - action: action_store_year_of_manufacture
+  - action: utter_ask_km_driven
+  - intent: inform_km_driven
+  - action: action_store_km_driven
+  - action: utter_ask_fuel_type
+  - intent: inform_fuel_type
+  - action: action_store_fuel_type
+  - action: utter_ask_transmission_type
+  - intent: inform_transmission_type
+  - action: action_store_transmission_type
+  - action: utter_ask_mileage
+  - intent: inform_mileage
+  - action: action_store_mileage
+  - action: utter_ask_engine
+  - intent: inform_engine
+  - action: action_store_engine
+  - action: utter_ask_max_power
+  - intent: inform_max_power
+  - action: action_store_max_power
+  - action: utter_ask_seats
+  - intent: inform_seats
+  - action: action_store_seats
+  - action: action_display_car_details

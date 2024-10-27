@@ -1,0 +1,138 @@
+version: "3.1"
+
+
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  # NLU data for informing the brand
+  - intent: inform_brand
+    examples: |
+      - The brand is [Maruti](brand)
+      - I have a [Hyundai](brand)
+      - My car brand is [Ford](brand)
+      - The car is from [Toyota](brand)
+      - I drive a [Honda](brand)
+      - It's a [Renault](brand)
+      - The brand is [Mahindra](brand)
+      - The brand is [Volkswagen](brand)
+
+  # NLU data for informing the model
+  - intent: inform_model
+    examples: |
+      - The model is [Alto](model)
+      - My car model is [Grand](model)
+      - It's a [i20](model)
+      - I own an [Ecosport](model)
+      - My car model is [Wagon R](model)
+      - The car model is [i10](model)
+      - It’s a [Swift](model)
+      - The model is [Verna](model)
+      - I drive a [Ciaz](model)
+      - It's an [Innova](model)
+      - My car model is [Baleno](model)
+      - It's a [Swift Dzire](model)
+      - The car model is [Creta](model)
+      - I have a [City](model)
+      - The model is [KWID](model)
+      - My car model is [Amaze](model)
+      - It's a [XUV500](model)
+      - The car model is [Polo](model)
+      - I own an [Ertiga](model)
+
+  # NLU data for informing the year of manufacture
+  - intent: inform_year_of_manufacture
+    examples: |
+      - It was made in [2018](year_of_manufacture)
+      - The year is [2015](year_of_manufacture)
+      - My car was manufactured in [2020](year_of_manufacture)
+      - It’s from [2017](year_of_manufacture)
+      - My car is from [2019](year_of_manufacture)
+
+  # NLU data for informing the kilometers driven
+  - intent: inform_km_driven
+    examples: |
+      - It has driven [20000](km_driven) kilometers
+      - The car has [50000](km_driven) km on it
+      - My car has done [12000](km_driven) km
+      - It’s been driven for [40000](km_driven) kilometers
+      - The car has [30000](km_driven) km mileage
+
+  # NLU data for informing the fuel type
+  - intent: inform_fuel_type
+    examples: |
+      - It's a [petrol](fuel_type) car
+      - The car runs on [diesel](fuel_type)
+      - It's a [CNG](fuel_type) model
+      - My car uses [electric](fuel_type) fuel
+
+  # NLU data for informing the transmission type
+  - intent: inform_transmission_type
+    examples: |
+      - It has [manual](transmission_type) transmission
+      - The car is [automatic](transmission_type)
+      - It’s a [manual](transmission_type) model
+
+  # NLU data for informing the mileage
+  - intent: inform_mileage
+    examples: |
+      - The mileage is [18](mileage) kmpl
+      - It gives [15](mileage) km per liter
+      - My car has a mileage of [12](mileage) kmpl
+
+  # NLU data for informing the engine capacity
+  - intent: inform_engine
+    examples: |
+      - The engine is [1200](engine) cc
+      - My car has a [1000](engine) cc engine
+      - It comes with a [1500](engine) cc engine
+      - The engine capacity is [1800](engine) cc
+
+  # NLU data for informing the maximum power
+  - intent: inform_max_power
+    examples: |
+      - The maximum power is [100](max_power) bhp
+      - It has [90](max_power) bhp power
+      - My car has a power of [85](max_power) bhp
+
+  # NLU data for informing the seats
+  - intent: inform_seats
+    examples: |
+      - It has [5](seats) seats
+      - The car has [7](seats) seats
+      - My car has [4](seats) seats
+      - It is a [6](seats)-seater

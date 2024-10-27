@@ -1,0 +1,98 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hello
+    - Hi
+    - Hey
+    - Good morning
+    - Good afternoon
+
+- intent: provide_brand
+  examples: |
+    - I have a [Toyota](brand)
+    - The brand is [Ford](brand)
+    - I drive a [Honda](brand)
+
+- intent: provide_model
+  examples: |
+    - The model is [Camry](model)
+    - I have a [Civic](model)
+    - It's a [Mustang](model)
+
+- intent: provide_year_of_manufacture
+  examples: |
+    - It was made in [2018](year_of_manufacture)
+    - The year of manufacture is [2020](year_of_manufacture)
+    - I bought it in [2019](year_of_manufacture)
+
+- intent: provide_km_driven
+  examples: |
+    - It has driven [15000](km_driven) kilometers
+    - The car has [20000](km_driven) km on it
+    - I drove it for [25000](km_driven) km
+
+- intent: provide_fuel_type
+  examples: |
+    - It uses [Petrol](fuel_type)
+    - The fuel type is [Diesel](fuel_type)
+    - It's an [Electric](fuel_type) car
+
+- intent: provide_transmission_type
+  examples: |
+    - It has [Automatic](transmission_type) transmission
+    - The transmission is [Manual](transmission_type)
+    - It's an [Automatic](transmission_type) car
+
+- intent: provide_mileage
+  examples: |
+    - It gives [15](mileage) km/l
+    - The mileage is [12](mileage) km/l
+    - I get about [10](mileage) km/l
+
+- intent: provide_engine
+  examples: |
+    - The engine capacity is [2000](engine) cc
+    - It has a [1500](engine) cc engine
+    - The engine size is [1800](engine) cc
+
+- intent: provide_max_power
+  examples: |
+    - It has a maximum power of [150](max_power) bhp
+    - The max power is [200](max_power) bhp
+    - It delivers [120](max_power) bhp
+
+- intent: provide_seats
+  examples: |
+    - It has [5](seats) seats
+    - The car can seat [7](seats) people
+    - It has [4](seats) seats
+
+- intent: ask_price_prediction
+  examples: |
+    - Can you predict the price?
+    - What will the price be?
+    - How much is my car worth?
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct

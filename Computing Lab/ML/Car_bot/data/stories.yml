@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+
+
+  - story: greet and ask for brand
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm  # User agrees to provide details
+      - action: utter_ask_brand
+
+  - story: ask for car details
+    steps:
+      - intent: provide_brand
+        entities:  # Capture the brand entity
+          - brand: "{brand}"
+      - action: utter_ask_model
+      - intent: provide_model
+        entities:  # Capture the model entity
+          - model: "{model}"
+      - action: utter_ask_year_of_manufacture
+      - intent: provide_year_of_manufacture
+        entities:  # Capture the year_of_manufacture entity
+          - year_of_manufacture: "{year_of_manufacture}"
+      - action: utter_ask_km_driven
+      - intent: provide_km_driven
+        entities:  # Capture the km_driven entity
+          - km_driven: "{km_driven}"
+      - action: utter_ask_fuel_type
+      - intent: provide_fuel_type
+        entities:  # Capture the fuel_type entity
+          - fuel_type: "{fuel_type}"
+      - action: utter_ask_transmission_type
+      - intent: provide_transmission_type
+        entities:  # Capture the transmission_type entity
+          - transmission_type: "{transmission_type}"
+      - action: utter_ask_mileage
+      - intent: provide_mileage
+        entities:  # Capture the mileage entity
+          - mileage: "{mileage}"
+      - action: utter_ask_engine
+      - intent: provide_engine
+        entities:  # Capture the engine entity
+          - engine: "{engine}"
+      - action: utter_ask_max_power
+      - intent: provide_max_power
+        entities:  # Capture the max_power entity
+          - max_power: "{max_power}"
+      - action: utter_ask_seats
+      - intent: provide_seats
+        entities:  # Capture the seats entity
+          - seats: "{seats}"
+      - action: action_predict_car_price  # Call the action to predict the price
+      - action: utter_price_prediction  # Provide the predicted price to the user
