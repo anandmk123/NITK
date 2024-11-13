@@ -1,0 +1,106 @@
+algorithm,target,MSE,MAE,R²,Best MSE Model,Best MAE Model,Best R² Model
+KNN,area_per_core,0,0,1,KNN,KNN,KNN
+Linear Regression,area_per_core,0,0,1,KNN,KNN,KNN
+Decision Tree,area_per_core,0,0,1,KNN,KNN,KNN
+AdaBoost,area_per_core,0,0,1,KNN,KNN,KNN
+Random Forest,area_per_core,0,0,1,KNN,KNN,KNN
+SVR,area_per_core,0,0,1,KNN,KNN,KNN
+AdaBoost with DecisionTree,area_per_core,0,0,1,KNN,KNN,KNN
+SVR,avg_cores_power,0.002657188,0.042897164,0.9973595,Random Forest,AdaBoost with DecisionTree,Random Forest
+KNN,avg_cores_power,0.00615838,0.061366009,0.993880296,Random Forest,AdaBoost with DecisionTree,Random Forest
+Random Forest,avg_cores_power,0.00036823,0.007599281,0.999634083,Random Forest,AdaBoost with DecisionTree,Random Forest
+Linear Regression,avg_cores_power,0.115867654,0.255052957,0.884860039,Random Forest,AdaBoost with DecisionTree,Random Forest
+AdaBoost with DecisionTree,avg_cores_power,0.000449563,0.006266263,0.99955326,Random Forest,AdaBoost with DecisionTree,Random Forest
+AdaBoost,avg_cores_power,0.069499013,0.226387408,0.930937467,Random Forest,AdaBoost with DecisionTree,Random Forest
+Decision Tree,avg_cores_power,0.000717735,0.008137818,0.999286773,Random Forest,AdaBoost with DecisionTree,Random Forest
+SVR,avg_power,0.002913208,0.042701294,0.997084454,Random Forest,AdaBoost with DecisionTree,Random Forest
+Decision Tree,avg_power,0.001177405,0.010814876,0.99882165,Random Forest,AdaBoost with DecisionTree,Random Forest
+Random Forest,avg_power,0.000703041,0.010103002,0.999296395,Random Forest,AdaBoost with DecisionTree,Random Forest
+AdaBoost,avg_power,0.107243824,0.285371938,0.892670114,Random Forest,AdaBoost with DecisionTree,Random Forest
+AdaBoost with DecisionTree,avg_power,0.000735485,0.008564943,0.999263924,Random Forest,AdaBoost with DecisionTree,Random Forest
+KNN,avg_power,0.00664982,0.061119561,0.993344844,Random Forest,AdaBoost with DecisionTree,Random Forest
+Linear Regression,avg_power,0.135451351,0.265138148,0.86443995,Random Forest,AdaBoost with DecisionTree,Random Forest
+Random Forest,avg_power_per_router,0.007935753,0.037082583,0.991887254,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+KNN,avg_power_per_router,0.008018847,0.036800445,0.991802307,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,avg_power_per_router,0.004022752,0.020415238,0.995887527,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+SVR,avg_power_per_router,0.014256708,0.079638515,0.98542532,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost,avg_power_per_router,0.118815349,0.293267946,0.87853468,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,avg_power_per_router,0.187349982,0.318866226,0.808471501,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Decision Tree,avg_power_per_router,0.012073996,0.039311758,0.987656715,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Random Forest,avg_routers_power,0.002316247,0.016971903,0.997629253,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,avg_routers_power,0.001232899,0.012336759,0.998738091,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost,avg_routers_power,0.271746401,0.472248313,0.721859546,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Decision Tree,avg_routers_power,0.003448034,0.018590967,0.996470836,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+SVR,avg_routers_power,0.005777092,0.049378578,0.994086976,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+KNN,avg_routers_power,0.008503707,0.055204162,0.991296206,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,avg_routers_power,0.240620034,0.336799144,0.753718301,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,core_avg_temp_L0,0.60695064,0.496998577,0.383883754,Random Forest,AdaBoost with DecisionTree,Random Forest
+AdaBoost with DecisionTree,core_avg_temp_L0,0.007712879,0.041478081,0.992170648,Random Forest,AdaBoost with DecisionTree,Random Forest
+KNN,core_avg_temp_L0,0.228291851,0.201732233,0.768260697,Random Forest,AdaBoost with DecisionTree,Random Forest
+SVR,core_avg_temp_L0,0.474073004,0.253601477,0.518767984,Random Forest,AdaBoost with DecisionTree,Random Forest
+Decision Tree,core_avg_temp_L0,0.010618344,0.050590785,0.989221307,Random Forest,AdaBoost with DecisionTree,Random Forest
+Random Forest,core_avg_temp_L0,0.006899563,0.043631167,0.992996246,Random Forest,AdaBoost with DecisionTree,Random Forest
+AdaBoost,core_avg_temp_L0,0.374042408,0.448087373,0.62030915,Random Forest,AdaBoost with DecisionTree,Random Forest
+AdaBoost,core_avg_temp_L1,0.255673127,0.409785586,0.74741286,Random Forest,Random Forest,Random Forest
+Decision Tree,core_avg_temp_L1,0.004260365,0.030661034,0.995791058,Random Forest,Random Forest,Random Forest
+Random Forest,core_avg_temp_L1,0.00274349,0.026497072,0.997289624,Random Forest,Random Forest,Random Forest
+KNN,core_avg_temp_L1,0.219143689,0.20003481,0.783501386,Random Forest,Random Forest,Random Forest
+Linear Regression,core_avg_temp_L1,0.903735085,0.586467516,0.10717304,Random Forest,Random Forest,Random Forest
+SVR,core_avg_temp_L1,0.345991106,0.271953093,0.658185023,Random Forest,Random Forest,Random Forest
+AdaBoost with DecisionTree,core_avg_temp_L1,0.003392627,0.026744339,0.996648323,Random Forest,Random Forest,Random Forest
+AdaBoost with DecisionTree,layer_area,3.37E-32,2.77E-17,1,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+SVR,layer_area,0.0040874,0.056837568,0.996002822,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Decision Tree,layer_area,0.000288875,0.00251344,0.999717501,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+KNN,layer_area,0.005700974,0.05935749,0.994424864,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,layer_area,0.102300576,0.240292006,0.899957505,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost,layer_area,0.033471845,0.146152312,0.967266979,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Random Forest,layer_area,8.04E-05,0.002857573,0.999921339,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,mem_avg_temp_L0,0.882939247,0.474218464,0.121267956,Random Forest,Random Forest,Random Forest
+KNN,mem_avg_temp_L0,0.431064535,0.257618299,0.570989487,Random Forest,Random Forest,Random Forest
+Decision Tree,mem_avg_temp_L0,0.008236232,0.047074137,0.991803014,Random Forest,Random Forest,Random Forest
+Random Forest,mem_avg_temp_L0,0.005140402,0.039821865,0.994884092,Random Forest,Random Forest,Random Forest
+AdaBoost,mem_avg_temp_L0,0.198474604,0.348138235,0.802471127,Random Forest,Random Forest,Random Forest
+SVR,mem_avg_temp_L0,0.974220789,0.319300954,0.030421371,Random Forest,Random Forest,Random Forest
+AdaBoost with DecisionTree,mem_avg_temp_L0,0.006442168,0.043238302,0.993588529,Random Forest,Random Forest,Random Forest
+AdaBoost with DecisionTree,mem_avg_temp_L1,0.002008549,0.021193462,0.998045967,Random Forest,Random Forest,Random Forest
+KNN,mem_avg_temp_L1,0.251195068,0.202891767,0.755622875,Random Forest,Random Forest,Random Forest
+AdaBoost,mem_avg_temp_L1,0.146379695,0.276187041,0.857593347,Random Forest,Random Forest,Random Forest
+SVR,mem_avg_temp_L1,0.399017288,0.277005222,0.61181285,Random Forest,Random Forest,Random Forest
+Decision Tree,mem_avg_temp_L1,0.002969426,0.023472927,0.99711117,Random Forest,Random Forest,Random Forest
+Random Forest,mem_avg_temp_L1,0.001712604,0.019846778,0.998333879,Random Forest,Random Forest,Random Forest
+Linear Regression,mem_avg_temp_L1,1.002997696,0.576329021,0.024225694,Random Forest,Random Forest,Random Forest
+AdaBoost,router_avg_temp_L0,0.207865535,0.349418056,0.791506898,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,router_avg_temp_L0,0.00474654,0.031283266,0.99523913,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Random Forest,router_avg_temp_L0,0.004992319,0.03623045,0.994992609,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Decision Tree,router_avg_temp_L0,0.00747943,0.041305811,0.992497989,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+KNN,router_avg_temp_L0,0.234146587,0.179669942,0.7651465,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,router_avg_temp_L0,0.586989808,0.441495887,0.411238009,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+SVR,router_avg_temp_L0,0.523596678,0.220365989,0.47482253,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+KNN,router_avg_temp_L1,0.229965721,0.178600261,0.780674563,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+SVR,router_avg_temp_L1,0.370785193,0.249553678,0.646370667,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,router_avg_temp_L1,0.001961911,0.019296705,0.998128865,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Decision Tree,router_avg_temp_L1,0.003346533,0.024375095,0.996808307,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,router_avg_temp_L1,0.907990952,0.55790246,0.134020882,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Random Forest,router_avg_temp_L1,0.002038895,0.021136038,0.998055443,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost,router_avg_temp_L1,0.161615769,0.31195218,0.845862031,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Decision Tree,steady_state_temp_L0,0.002079523,0.01709256,0.9978349,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+KNN,steady_state_temp_L0,0.038007184,0.117123291,0.960428741,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,steady_state_temp_L0,0.410035988,0.484831812,0.573090176,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+SVR,steady_state_temp_L0,0.06127265,0.124959515,0.936205853,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost,steady_state_temp_L0,0.197912408,0.371191163,0.793943083,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Random Forest,steady_state_temp_L0,0.00124073,0.015436981,0.998708211,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,steady_state_temp_L0,0.001059775,0.012507024,0.998896614,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Decision Tree,steady_state_temp_L1,0.002036161,0.016912644,0.997880862,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,steady_state_temp_L1,0.412262282,0.486189491,0.570937173,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost,steady_state_temp_L1,0.19310466,0.362398611,0.799025923,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Random Forest,steady_state_temp_L1,0.001211098,0.015262309,0.998739547,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,steady_state_temp_L1,0.001141752,0.012705373,0.998811719,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+KNN,steady_state_temp_L1,0.038336275,0.117546992,0.960101442,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+SVR,steady_state_temp_L1,0.062197881,0.125226257,0.935267426,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+SVR,total_area,0.004080426,0.056787899,0.996009643,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Linear Regression,total_area,0.102300546,0.240291886,0.899957559,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+KNN,total_area,0.005701011,0.059357609,0.994424829,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Random Forest,total_area,8.04E-05,0.002857551,0.999921341,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost,total_area,0.033325567,0.146931974,0.967410036,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,total_area,1.81E-10,6.88E-07,1,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+Decision Tree,total_area,0.000288876,0.002513427,0.999717501,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
