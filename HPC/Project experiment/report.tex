@@ -14,8 +14,8 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{amsmath}
-
-
+\usepackage{graphicx}
+\usepackage{subcaption}  % This is the correct package
 
 \begin{document}
 	
@@ -64,17 +64,13 @@ This section focuses on the experimental setup, dataset generation, dataset prep
 		\item \textbf{Mean Absolute Error (MAE)}: Average of the absolute difference between the predicted values and actual values..
 		\item \textbf{R² (Coefficient of Determination)}: The dependent variable variance proportion explained by the independent variables.
 	\end{itemize}
-
-
 \subsection{Results Analysis}
 
+	\subsubsection{Temperature Analysis}
+	This section analyzes temperature-related parameters such as steady-state temperature, core average temperature, memory average temperature, and router average temperature. Tables \ref{tab:steady_state_temp_L0} and \ref{tab:steady_state_temp_L1} analyze layer one and layer two steady-state temperatures. Layer one and two core average temperature metrics are provided in Tables \ref{tab:core_avg_temp_L0} and \ref{tab:core_avg_temp_L1}. Tables \ref{tab:mem_avg_temp_L0} and \ref{tab:mem_avg_temp_L1} analyze layer one and layer two memory average temperatures. Layer one and two router average temperature metrics are provided in Tables \ref{tab:router_avg_temp_L0} and \ref{tab:router_avg_temp_L1}.
 
-\subsubsection{Temperature Analysis}
 
-The *Temperature Analysis* subsection focuses on the performance of different algorithms specifically on the temperature-related datasets (*steady\_state\_temp\_L0* and *steady\_state\_temp\_L1*). Below are tables showcasing the performance metrics for each algorithm.
-
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - steady\_state\_temp\_L0}
 	\label{tab:steady_state_temp_L0}
 	\begin{tabular}{lccc}
@@ -93,8 +89,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 \end{table}
 
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - steady\_state\_temp\_L1}
 	\label{tab:steady_state_temp_L1}
 	\begin{tabular}{lccc}
@@ -113,8 +108,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 \end{table}
 
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - core\_avg\_temp\_L0}
 	\label{tab:core_avg_temp_L0}
 	\begin{tabular}{lccc}
@@ -132,8 +126,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 	\end{tabular}
 \end{table}
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - core\_avg\_temp\_L1}
 	\label{tab:core_avg_temp_L1}
 	\begin{tabular}{lccc}
@@ -150,11 +143,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 		\bottomrule
 	\end{tabular}
 \end{table}
-
-
-
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - mem\_avg\_temp\_L0}
 	\label{tab:mem_avg_temp_L0}
 	\begin{tabular}{lccc}
@@ -171,10 +160,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 		\bottomrule
 	\end{tabular}
 \end{table}
-
-
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - mem\_avg\_temp\_L1}
 	\label{tab:mem_avg_temp_L1}
 	\begin{tabular}{lccc}
@@ -192,8 +178,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 	\end{tabular}
 \end{table}
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - router\_avg\_temp\_L0}
 	\label{tab:router_avg_temp_L0}
 	\begin{tabular}{lccc}
@@ -212,8 +197,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 \end{table}
 
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - router\_avg\_temp\_L1}
 	\label{tab:router_avg_temp_L1}
 	\begin{tabular}{lccc}
@@ -230,14 +214,11 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 		\bottomrule
 	\end{tabular}
 \end{table}
-
 	
-	
-\subsubsection{Power Analysis}
-The *Temperature Analysis* subsection focuses on the performance of different algorithms specifically on the temperature-related datasets (*steady\_state\_temp\_L0* and *steady\_state\_temp\_L1*). Below are tables showcasing the performance metrics for each algorithm.
+	\subsubsection{Power Analysis}
+	This section analyzes power-related parameters such as average power, average core power, average power per router, and average router power. Table \ref{tab:avg_cores_power} analyzes the average core power. Average power metrics are provided in Table \ref{tab:avg_power}. Table \ref{tab:avg_power_per_router} analyzes the average power per router. Average router power metrics are provided in Table \ref{tab:avg_routers_power}.
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - avg\_cores\_power}
 	\label{tab:avg_cores_power}
 	\begin{tabular}{lccc}
@@ -256,8 +237,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 \end{table}
 
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - avg\_power}
 	\label{tab:avg_power}
 	\begin{tabular}{lccc}
@@ -275,8 +255,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 	\end{tabular}
 \end{table}
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - avg\_power\_per\_router}
 	\label{tab:avg_power_per_router}
 	\begin{tabular}{lccc}
@@ -294,8 +273,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 	\end{tabular}
 \end{table}
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - avg\_routers\_power}
 	\label{tab:avg_routers_power}
 	\begin{tabular}{lccc}
@@ -315,11 +293,10 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 
 
 
-\subsubsection{Area Analysis}
-The *Temperature Analysis* subsection focuses on the performance of different algorithms specifically on the temperature-related datasets (*steady\_state\_temp\_L0* and *steady\_state\_temp\_L1*). Below are tables showcasing the performance metrics for each algorithm.
+	\subsubsection{Area Analysis}
+	This section analyzes area-related parameters such as layer area, total area, and area per core. Table \ref{tab:layer_area} analyzes the layer area. Total area metrics are provided in Table \ref{tab:total_area}. Table \ref{tab:area_per_core} analyzes the area per core.
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - layer\_area}
 	\label{tab:layer_area}
 	\begin{tabular}{lccc}
@@ -337,8 +314,7 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 	\end{tabular}
 \end{table}
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
 	\caption{Performance Metrics for Different Algorithms - total\_area}
 	\label{tab:total_area}
 	\begin{tabular}{lccc}
@@ -356,8 +332,8 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 	\end{tabular}
 \end{table}
 
-\begin{table}[ht]
-	\centering
+\begin{table}[htbp]
+
 	\caption{Performance Metrics for Different Algorithms - area\_per\_core}
 	\label{tab:area_per_core}
 	\begin{tabular}{lccc}
@@ -374,6 +350,167 @@ The *Temperature Analysis* subsection focuses on the performance of different al
 		\bottomrule
 	\end{tabular}
 \end{table}
+
+\subsection{Comparison study}
+
+	\subsubsection{Temperature Analysis}
+	This section compares the performance of different models across parameters such as steady-state temperature, core average temperature, memory average temperature, and router average temperature. After studying Tables \ref{tab:steady_state_temp_L0} and \ref{tab:steady_state_temp_L1}, it is evident that AdaBoost with Decision Tree and Random Forest achieved minimal errors (MSE, MAE) and the highest $R^2$ values ($\geq$0.998 $\geq$0.998) for both layers. Algorithms like KNN and SVR had higher errors and lower $R^2$ values. Tables \ref{tab:core_avg_temp_L0}, \ref{tab:core_avg_temp_L1}, \ref{tab:mem_avg_temp_L0}, \ref{tab:mem_avg_temp_L1}, \ref{tab:router_avg_temp_L0}, and \ref{tab:router_avg_temp_L1} show that AdaBoost with Decision Tree and Random Forest performs well with minimal MSE and MAE values and $R^2$ values close to 1 across both layers. Linear regression and SVR show the worst performance.
+	
+	\subsubsection{Power Analysis}
+	This section compares the performance of different models across parameters such as average power, average core power, average power per router, and average router power. After studying Table \ref{tab:avg_cores_power}, it is evident that AdaBoost with Decision Tree and Random Forest show close to zero errors (MSE, MAE) and the highest $R^2$ values ($\geq$0.99). Algorithms like Linear regression and KNN had higher errors and lower $R^2$ values. Tables \ref{tab:avg_power}, \ref{tab:avg_routers_power}, and \ref{tab:avg_power_per_router} show that AdaBoost with Decision Tree performs better than all other algorithms with minimal MSE and MAE values and $R^2$ values close to 1 for average power metrics. Linear regression and KNN show the worst performance with relatively high errors.
+	
+	\subsubsection{Area Analysis}
+	This section compares the performance of different models across parameters such as layer area, total area, and area per core. After studying Tables \ref{tab:layer_area} and \ref{tab:total_area}, it is evident that AdaBoost with Decision Tree and Random Forest show near-perfect performance with close to zero errors (MSE, MAE) and $R^2$ values close to 1. Algorithms like SVR and KNN had higher errors and lower $R^2$ values. Table \ref{tab:area_per_core} shows that all algorithms made perfect predictions with MSE and MAE values as 0 and $R^2$ value as 1 because the area per core is a constant value.
+	
+	AdaBoost with Decision Tree and Random Forest consistently outperformed all other models with the lowest MSE and MAE values and the highest $R^2$ values across the prediction of all the power, area, and thermal metrics. Random Forest shows slightly less performance than AdaBoost with Decision Tree. Linear Regression and SVR show the worst performance with higher errors and low $R^2$ values. It is concluded that AdaBoost with Decision Tree is the most consistent and accurate model among all other models. This model works by training a series of 50 decision trees, each aimed at reducing the overall prediction error. Each round assigns higher weights to the samples, which are hard to predict. The subsequent trees give more importance to those challenging cases. The final prediction is the aggregation of each tree, which overall makes a robust prediction model. 
+
+	Figures 1 to 7 compare actual values from PAT Noxim and predicted values from the AdaBoost model with the decision tree. The blue dots are individual data points from the test dataset, where each dot shows how closely the model’s predictions match the actual values. The red dashed line represents the ideal fit where the model’s predictions match the actual values. If points are closely clustered around the red line, this suggests that the model’s predictions are relatively accurate.A larger spread from the red line indicates higher prediction errors. Figures 1 to 4 show that the actual and predicted values are almost identical for the temperature parameters. Temperature is measured in degrees Celsius. The blue points and red lines are nearly perfectly aligned. Figures 5 and 6 illustrate that the predicted and actual values are perfectly aligned, highlighting the effectiveness of the AdaBoost model with the decision tree in predicting power values. Power is calculated in \((\text{J/cycle})\).Figure 7 demonstrates that the area is perfectly predicted by the AdaBoost model with the decision tree. The area is measured in \((\mu\text{m}^2)\).
+
+% Begin the figure environment for two images side by side for each pair of targets
+\begin{figure}[htbp]
+    % First graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_steady_state_temp_L0.png}
+        \caption{Actual vs Predicted for steady\_state\_temp\_L0}
+        \label{fig:actual_vs_predicted_steady_state_temp_L0}
+    \end{subfigure}
+    \hfill
+    % Second graph
+    \begin{subfigure}{0.24\textwidth}
+        \includegraphics[width=\linewidth]{actual_vs_predicted_steady_state_temp_L1.png}
+        \caption{Actual vs Predicted for steady\_state\_temp\_L1}
+        \label{fig:actual_vs_predicted_steady_state_temp_L1}
+    \end{subfigure}
+
+    \caption{Actual vs Predicted for steady\_state\_temp\_L0 and steady\_state\_temp\_L1}
+    \label{fig:side_by_side_graphs_steady_state_temp}
+\end{figure}
+
+\begin{figure}[htbp]
+    % First graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_router_avg_temp_L0.png}
+        \caption{Actual vs Predicted for router\_avg\_temp\_L0}
+        \label{fig:actual_vs_predicted_router_avg_temp_L0}
+    \end{subfigure}
+    \hfill
+    % Second graph
+    \begin{subfigure}{0.24\textwidth}
+        \includegraphics[width=\linewidth]{actual_vs_predicted_router_avg_temp_L1.png}
+        \caption{Actual vs Predicted for router\_avg\_temp\_L1}
+        \label{fig:actual_vs_predicted_router_avg_temp_L1}
+    \end{subfigure}
+
+    \caption{Actual vs Predicted for router\_avg\_temp\_L0 and router\_avg\_temp\_L1}
+    \label{fig:side_by_side_graphs_router_avg_temp}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    % First graph
+    \begin{subfigure}{0.24\textwidth}
+        \includegraphics[width=\linewidth]{actual_vs_predicted_core_avg_temp_L0.png}
+        \caption{Actual vs Predicted for core\_avg\_temp\_L0}
+        \label{fig:actual_vs_predicted_core_avg_temp_L0}
+    \end{subfigure}
+    \hfill
+    % Second graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_core_avg_temp_L1.png}
+        \caption{Actual vs Predicted for core\_avg\_temp\_L1}
+        \label{fig:actual_vs_predicted_core_avg_temp_L1}
+    \end{subfigure}
+
+    \caption{Actual vs Predicted for core\_avg\_temp\_L0 and core\_avg\_temp\_L1}
+    \label{fig:side_by_side_graphs_core_avg_temp}
+\end{figure}
+
+\begin{figure}[htbp]
+    % First graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_mem_avg_temp_L0.png}
+        \caption{Actual vs Predicted for mem\_avg\_temp\_L0}
+        \label{fig:actual_vs_predicted_mem_avg_temp_L0}
+    \end{subfigure}
+    \hfill
+    % Second graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_mem_avg_temp_L1.png}
+        \caption{Actual vs Predicted for mem\_avg\_temp\_L1}
+        \label{fig:actual_vs_predicted_mem_avg_temp_L1}
+    \end{subfigure}
+
+    \caption{Actual vs Predicted for mem\_avg\_temp\_L0 and mem\_avg\_temp\_L1}
+    \label{fig:side_by_side_graphs_mem_avg_temp}
+\end{figure}
+
+\begin{figure}[htbp]
+    % First graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_avg_power_per_router.png}
+        \caption{Actual vs Predicted for avg\_power\_per\_router}
+        \label{fig:actual_vs_predicted_avg_power_per_router}
+    \end{subfigure}
+    \hfill
+    % Second graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_avg_power.png}
+        \caption{Actual vs Predicted for avg\_power}
+        \label{fig:actual_vs_predicted_avg_power}
+    \end{subfigure}
+
+    \caption{Actual vs Predicted for avg\_power\_per\_router and avg\_power}
+    \label{fig:side_by_side_graphs_avg_power_per_router_avg_power}
+\end{figure}
+
+\begin{figure}[htbp]
+    % First graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_avg_cores_power.png}
+        \caption{Actual vs Predicted for avg\_cores\_power}
+        \label{fig:actual_vs_predicted_avg_cores_power}
+    \end{subfigure}
+    \hfill
+    % Second graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_avg_routers_power.png}
+        \caption{Actual vs Predicted for avg\_routers\_power}
+        \label{fig:actual_vs_predicted_avg_routers_power}
+    \end{subfigure}
+
+    \caption{Actual vs Predicted for avg\_cores\_power and avg\_routers\_power}
+    \label{fig:side_by_side_graphs_avg_cores_power_avg_routers_power}
+\end{figure}
+
+\begin{figure}[htbp]
+    % First graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_layer_area.png}
+        \caption{Actual vs Predicted for layer\_area}
+        \label{fig:actual_vs_predicted_layer_area}
+    \end{subfigure}
+    \hfill
+    % Second graph
+    \begin{subfigure}{0.24\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{actual_vs_predicted_total_area.png}
+        \caption{Actual vs Predicted for total\_area}
+        \label{fig:actual_vs_predicted_total_area}
+    \end{subfigure}
+
+    \caption{Actual vs Predicted for layer\_area and total\_area}
+    \label{fig:side_by_side_graphs_layer_area_total_area}
+\end{figure}
 
 
 
