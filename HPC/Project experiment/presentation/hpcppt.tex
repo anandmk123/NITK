@@ -1,0 +1,400 @@
+\documentclass{beamer}
+\usepackage{adjustbox}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+% Use the Madrid theme for a clean and professional look
+\usetheme{Madrid}
+
+% Title and Author information
+\title{Power, Area and Thermal Prediction in 3D Network-on-Chip using Machine Learning}
+\author{
+	\textbf{ABHIJITH C} \\ % Author
+	Roll Number: 242CS003 \\ % Roll number
+	\textbf{ANAND M K} \\ % Author
+	Roll Number: 242CS008 % Roll number
+}
+\institute{
+	Department of Computer Science and Engineering \\ 
+	National Institute of Technology Karnataka (NITK) \\ 
+	Surathkal, India
+}
+
+\date{} % Remove the date or keep it empty
+
+% Remove the footer that displays names
+\setbeamertemplate{footline}{}
+
+% Change the color of the title text to white
+\setbeamercolor{title}{fg=white}
+
+\begin{document}
+	
+	% Title slide
+	\frame{\titlepage}
+	
+	% Introduction slide
+	\begin{frame}
+		\frametitle{Introduction}
+		\begin{itemize}
+			\item Due to the complexity of 3D Network-on-Chip (NoC) systems, managing power, area, and thermal dissipation has become a significant challenge, affecting overall system performance and reliability.
+			\item Traditional models struggle to account for the interdependencies between these factors, making accurate prediction methods crucial for system optimization.
+			\item Machine learning, with its ability to analyze large datasets and identify complex patterns, offers a promising approach to predict power, area, and thermal behavior in 3D NoC systems.
+			\item This study focuses on developing a framework that utilizes machine learning models to predict power, area, and thermal characteristics by considering key parameters of NoC systems.
+		\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Literature Survey : TTQR: A Traffic- and Thermal-Aware Q-Routing for 3D Network-on-Chip}
+
+\textbf{Authors:} Hanyan Liu, Xiaowen Chen, Yunping Zhao, Chen Li, Jianzhuang Lu (\textbf{2022}) \\
+\textbf{Approach:} A Q-learning-based routing algorithm using two Q-tables: one for local traffic status and one for global thermal information. \\
+\textbf{Performance Metrics:} Average latency, Throughput, Statistical Traffic Load Distribution, Temperature distribution. \\
+\textbf{Results:} 
+\begin{itemize}
+    \item 63.6\% improvement in latency compared to TAAR (Topology-aware Adaptive Routing).
+    \item 41.4\% improvement in throughput compared to TAAR.
+\end{itemize}
+\textbf{Observations:} 
+\begin{itemize}
+    \item Provides more uniform temperature distribution across layers than TAAR.
+    \item More balanced traffic load distribution across layers.
+\end{itemize}
+\textbf{Limitations:} Slightly higher average temperature compared to TAAR.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Q-Thermal: A Q-Learning-Based Thermal-Aware Routing Algorithm for 3-D Network On-Chips}
+
+\textbf{Authors:} Narges Shahabinejad, Hakem Beitollahi (\textbf{2020}) \\
+\textbf{Approach:} A Q-learning-based routing algorithm utilizing thermal information in a Q-table to manage routing decisions, optimizing thermal distribution by selecting paths with lower temperatures. \\
+\textbf{Performance Metrics:} Standard deviation of thermal distribution, Average latency, Number of thermal hotspots. \\
+\textbf{Results:} 
+\begin{itemize}
+    \item 28\% and 13\% improvement in thermal distribution standard deviation compared to TAAR and PTB3R.
+    \item 32\% improvement in average latency compared to existing methods.
+    \item 38\% reduction in thermal hotspots compared to TAAR and 54\% compared to PTB3R.
+\end{itemize}
+\textbf{Observations:} Optimizes thermal distribution and reduces hotspots in 3-D NoCs. \\
+\textbf{Limitations:} Slight increase in area and power consumption compared to previous routing techniques.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{A Nearest-Neighbor-Based Thermal Sensor Allocation and Temperature Reconstruction Method for 3-D NoC-Based Multicore Systems}
+
+\small
+\textbf{Authors:} Menghao Guo, Tong Cheng, Xinyi Li, Li Li, Yuxiang Fu (\textbf{2022}) \\
+\textbf{Approach:} Uses a nearest-neighbor-based initialization algorithm to allocate thermal sensors, followed by a Genetic Algorithm (GA) for optimization. Artificial neural networks (ANN) are employed for estimating the temperature of non-sensor-allocated nodes. \\
+\textbf{Performance Metrics:} Average temperature error, Maximum temperature error. \\
+\textbf{Results:} 
+\begin{itemize}
+    \item Average temperature error reduced by 17.60\%–88.63\%.
+    \item Maximum temperature error reduced by 26.97\%–85.92\%.
+\end{itemize}
+\textbf{Observations:} 
+\begin{itemize}
+    \item Effectively allocates thermal sensors based on spatial thermal correlation.
+    \item Uses ANN to estimate temperatures in non-sensor-allocated nodes.
+\end{itemize}
+\textbf{Limitations:} Assumes spatial thermal correlations remain constant across applications, which may affect temperature reconstruction accuracy in some cases.
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{NoCeption: A Fast PPA Prediction Framework for Network-on-Chips Using Graph Neural Network}
+
+\small
+\textbf{Authors:} Fuping Li, Ying Wang, Cheng Liu, Huawei Li, Xiaowei Li (\textbf{2022}) \\
+\textbf{Approach:} A Graph Neural Network framework designed to predict power, performance, and area (PPA) of Network-on-Chips (NoCs). \\
+\textbf{Performance Metrics:} Power prediction accuracy, Area prediction accuracy. \\
+\textbf{Results:} 
+\begin{itemize}
+    \item Power prediction accuracy = 97.36\%.
+    \item Area prediction accuracy = 97.83\%.
+\end{itemize}
+\textbf{Observations:} 
+\begin{itemize}
+    \item The framework offers fast and accurate PPA predictions, which aid in NoC design optimization.
+\end{itemize}
+\textbf{Limitations:} 
+\begin{itemize}
+    \item Performance and efficiency may degrade for larger systems, as the experiments are effective only up to a certain number of cores.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{TTNNM: Thermal- and Traffic-Aware Neural Network Mapping on 3D-NoC-based Accelerator}
+
+\small
+\textbf{Authors:} Xinyi Li, Wenjie Fan, Heng Zhang, Jinlun Ji, Tong Cheng, Shiping Li, Li Li, Yuxiang Fu (\textbf{2024}) \\
+\textbf{Approach:} A neural network-based mapping technique that optimizes temperature distribution by strategically mapping NN layers based on their computational loads. \\
+\textbf{Performance Metrics:} Average Temperature, Temperature Variance, Maximum Temperature, Average Packet Latency. \\
+\textbf{Results:} Average Temperature: 68.3°C, Maximum Temperature: 77.2°C, Temperature Variance: 5.9°C², Packet Latency: 13.6 cycles. \\
+\textbf{Observations:} 
+\begin{itemize}
+    \item Reduces average temperature, temperature variance, and maximum temperature.
+    \item Results in a more uniform temperature distribution across the NoC, improving thermal management.
+\end{itemize}
+\textbf{Limitations:} 
+\begin{itemize}
+    \item Primarily focused on offline inference scenarios, with limited consideration for dynamic or runtime scenarios.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Adaptive Machine Learning-Based Proactive Thermal Management for NoC Systems}
+
+\textbf{Authors:} Chen et al.
+\textbf{Year:} 2023 \\[10pt]
+
+\textbf{Approach:}
+An Adaptive Single-Layer Perceptron (ASLP) is utilized for predicting temperature, while adaptive reinforcement learning dynamically adjusts the throttling ratio. A revised thermal-traffic co-simulator and MCSL benchmark were used to evaluate the proposed model in simulated traffic patterns within an 8x8 NoC system.  
+
+\textbf{Results:}
+\begin{itemize}
+\item Saturation throughput increased by up to 43\%.
+\item Average temperature errors reduced by up to 78\%, and maximum errors by up to 74\%.
+\item Improved throughput and reduced latency under varying PIRs.
+\end{itemize}
+
+\textbf{Limitations:}
+\begin{itemize}
+\item Limited to the XY routing algorithm.
+\item Relies on accurate temperature readings from physical sensors or estimations.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Deep Reinforcement Learning for Self-Configurable NoC}
+
+\textbf{Author:} Reza et al.
+\textbf{Year:} 2020 \\[5pt]
+
+\textbf{Approach:} Address power management in NoCs using reinforcement learning (RL), which configures network resources dynamically based on application needs and system utilization. Specifically, RL is applied to adjust NoC voltage levels, while a neural network (NN) is implemented to identify NoC performance patterns. A concentrated mesh NoC architecture is utilized to reduce the overhead of machine learning techniques. \\[5pt]
+
+\textbf{Results:}
+\begin{itemize}
+\item Throughput improved by 15\% and 10\% using COSMIC and E3S benchmarks, respectively.
+\item EDP improved by 45\% and 110\% using the same benchmarks.
+\end{itemize}
+
+\textbf{Strength:} Compared to non-ML solutions, it achieves significant improvements in throughput and EDP. \\[5pt]
+
+\textbf{Limitation:} Concentrated mesh NoC considered to reduce ML overheads. \\[5pt]
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Machine Learning Enabled Power-Aware Network-on-Chip Design}
+
+\textbf{Authors:} Dominic et al. \\
+\textbf{Year:} 2017 \\[10pt]
+
+\textbf{Approach:} Reduce both static and dynamic power consumption through power-gating techniques. The prediction of link utilization and traffic loads is implemented using a decision tree. The dataset used for training the predictor consists of historical data on link utilization, buffer utilization, and packet type. \\[10pt]
+
+\textbf{Results:}
+\begin{itemize}
+\item Dynamic power: 12.3 mW; static power: 16.6 mW.
+\item Latency improved by 14\%; power savings: 31.7\%–85.6\%.
+\item Area reduced by 62.3\%.
+\item Decision tree accuracy: +13.2\% (traffic) and +13.8\% (link utilization).
+\end{itemize}
+
+
+\textbf{Limitations:} Only the XY routing algorithm was used.
+\end{frame}
+
+\begin{frame}
+\frametitle{Machine Learning Enabled Solutions for Design and Optimization Challenges in NoCs}
+
+\textbf{Authors:} Farhadur et al. \\
+\textbf{Year:} 2023 \\[10pt]
+
+\textbf{Approach:} Address power issues in NoCs through the application of ML to configure the network. The input dataset includes node and link usage, computation and communication demands, thermal and power consumption, task deadline requirements, and execution time. Various design and optimization challenges are discussed in the study. \\[10pt]
+
+\textbf{Results:}
+\begin{itemize}
+\item Throughput and latency improved by up to 30\%, with an average improvement of 15\%.
+\item Energy consumption reduced by 6\%.
+\end{itemize}
+
+\textbf{Strength:} Superior performance compared to traditional ML methods. \\[10pt]
+
+\textbf{Limitations:} Only the XY routing algorithm was used.
+\end{frame}
+
+\begin{frame}
+\frametitle{Adaptive Machine Learning-Based Temperature Prediction Scheme for Thermal-Aware NoC System}
+
+\textbf{Authors:} Kun-Chih Jimmy et al. \\
+\textbf{Year:} 2020 \\[10pt]
+
+\textbf{Approach:} Predictive Dynamic Thermal Management (PDTM) technique, which proactively manages node temperatures based on predicted thermal information. An artificial neural network (ANN) is employed for temperature prediction. \\[10pt]
+
+\textbf{Results:}
+\begin{itemize}
+\item Average temperature error reduced by 37.2\% to 62.3\%.
+\item System throughput improved by 9.16\%.
+\item Area overhead reduced by 18.59\% to 22.11\%.
+\end{itemize}
+
+\textbf{Strength:} The model adapts dynamically to temperature behavior, improving overall system performance. \\[10pt]
+
+\textbf{Limitations:} Only the XY routing algorithm was used.
+\end{frame}
+
+\begin{frame}
+\frametitle{Predictive Thermal Management for Energy-Efficient Execution of Concurrent Applications on Heterogeneous Multicores}
+
+\textbf{Authors:} Eduardo Weber et al.
+\textbf{Year:} 2019 \\[10pt]
+
+\textbf{Approach:} Runtime manager incorporating a temperature predictor. Various regression models were trained using this data, and the model with the best performance was integrated into the runtime manager. \\[10pt]
+
+\textbf{Results:}
+\begin{itemize}
+\item MAE: 1.13°C; max error: 16.91°C; std. dev.: 1.31; AIC: 33222.
+\item 10\% improvement in energy and performance; doubled thermal cycling.
+\end{itemize}
+
+\textbf{Strength:} The predictor gives better error averages while maintaining a reasonable standard deviation. \\[10pt]
+
+\textbf{Limitations:} Increased thermal cycling and overhead for temperature prediction. \\[10pt]
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Challenges from Literature Survey}
+
+\begin{itemize}
+    \item \textbf{Availability of Datasets}: Most ML and DL models require a large volume of quality datasets for training. However, the availability of such datasets is limited in the area of PAT prediction for NoC.
+  
+    \item \textbf{Integrated Power, Thermal, and Area Prediction Models}: Most existing studies independently focus on power or thermal optimization. Studies on simultaneous analysis of power, area, and thermal are rare.
+  
+    \item \textbf{Scalability}: Many studies using ML or DL models have been tested in specific architectures or smaller systems, but their scalability to larger multi-core environments is unclear.
+
+    \item \textbf{Limited Routing Algorithms Considered:} Only a few routing algorithms, such as Q-learning-based approaches, have been considered for optimizing thermal and power management in NoC systems.
+
+    \item \textbf{Diversity of ML/DL Algorithms:} Few algorithms, such as reinforcement learning and neural networks, have been explored for PAT prediction in NoC, while CNN and regression models remain unexplored.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problem Statement}
+
+\begin{itemize}
+    \item \textbf{To develop an integrated machine learning framework for predicting power, area, and thermal characteristics of 3D Network-on-Chip (NoC) systems, addressing scalability and adaptability to different routing algorithms, using diverse ML/DL models.}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Objectives}
+
+\begin{itemize}
+    \item \textbf{To design a machine learning framework for predicting power, area, and thermal characteristics in 3D NoC systems.}
+    \item \textbf{To explore and apply diverse ML/DL models for accurate predictions.}
+    \item \textbf{To address scalability to larger NoC systems.}
+    \item \textbf{To ensure adaptability of the framework to different routing algorithms in NoC designs.}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Proposed Approach: Dataset Creation}
+
+\textbf{Dataset Generation Process:}
+
+\begin{itemize}
+  \item Use the configurations in Table \ref{tab:noc_params} to simulate a variety of NoC system setups.
+    \item Simulate the configurations with the \textbf{PAT-Noxim simulator} to generate PAT data (Power, Area, and Thermal information).
+\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{NoC Parameter} & \textbf{Parameter Values} \\
+\hline
+\textbf{Topology} & 3D Mesh Topology \\
+\hline
+\textbf{Routing Algorithm} & XYZ Routing, OE\_3D, Full Adaptive Routing \\
+\hline
+\textbf{Network Size} & dimX: 2 to 16, dimY: 2 to 16, dimZ: 2 \\
+\hline
+\textbf{Traffic Pattern} & Random \\
+\hline
+\textbf{Buffer Size} & 4, 6, 8, 10 \\
+\hline
+\textbf{Packet Size} & 4 \\
+\hline
+\textbf{Packet Injection Rate (PIR)} & 0.01 to 0.1 \\
+\hline
+\textbf{Sample Period} & 200000 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{NoC Parameters and Values}
+\label{tab:noc_params}
+\end{table}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Proposed Approach Overview}
+
+\textbf{Objective:}
+To predict power, area, and thermal (PAT) metrics in NoC systems using \textbf{AdaBoost} with \textbf{Decision Tree Regressors}.
+
+\begin{itemize}
+    \item The approach combines AdaBoost, an ensemble learning method, with Decision Trees as base learners to predict NoC system metrics.
+    \item AdaBoost improves the prediction accuracy by focusing on hard-to-predict instances, refining model performance over multiple iterations.
+    \item Decision Trees are chosen as base learners due to their simplicity and ability to model non-linear relationships effectively.
+    \item Separate models are trained for each PAT metric (Power, Area, Thermal).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{AdaBoost with Decision Tree Regressor}
+
+\begin{itemize}
+    \item \textit{AdaBoost} (Adaptive Boosting) is an ensemble technique that combines weak learners, such as \textit{Decision Trees}, to improve predictive accuracy.
+    \item It works by assigning more weight to misclassified data points, so subsequent learners focus on these harder examples.
+    \item The final model is a weighted combination of the weak learners, enhancing overall model performance.
+    \item \textit{Decision Tree Regressors} are non-linear models that split data based on feature values to predict a target.
+    \item They are effective for modeling complex relationships and capturing non-linear interactions between NoC parameters.
+    \item In AdaBoost, Decision Trees are used as base learners, improving the model's performance through ensemble learning.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{AdaBoost with Decision Tree Regressor Algorithm}
+
+\begin{algorithm}[H]
+\caption{AdaBoost with Decision Tree Regressor}
+\begin{algorithmic}[1]
+\State \textbf{Initialize:} Set initial sample weights equally, set $T$ as the total number of iterations (Number of Decision Trees ).
+\For{each iteration $t = 1, 2, ..., T$}
+    \State \textbf{Train Weak Model:} Train a Decision Tree on the weighted data.
+    \State \textbf{Calculate Error:} Compute the error rate based on the predictions.
+    \State \textbf{Update Weights:} 
+    \If{A sample is misclassified} 
+        \State Increase its weight to emphasize it for the next iteration.
+    \Else
+        \State Decrease the weight for correctly classified samples.
+    \EndIf
+    \State \textbf{Calculate Model Weight:} Assign a weight to the trained model based on its error rate.
+\EndFor
+\State \textbf{Final Prediction:} Combine the predictions of all models, weighted by their performance, to obtain the final prediction.
+\end{algorithmic}
+\end{algorithm}
+
+\end{frame}
+
+
+
+
+\end{document}
