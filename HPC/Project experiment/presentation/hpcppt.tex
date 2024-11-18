@@ -34,19 +34,37 @@
 	% Title slide
 	\frame{\titlepage}
 	
-	% Introduction slide
-	\begin{frame}
-		\frametitle{Introduction}
-		\begin{itemize}
-			\item Due to the complexity of 3D Network-on-Chip (NoC) systems, managing power, area, and thermal dissipation has become a significant challenge, affecting overall system performance and reliability.
-			\item Traditional models struggle to account for the interdependencies between these factors, making accurate prediction methods crucial for system optimization.
-			\item Machine learning, with its ability to analyze large datasets and identify complex patterns, offers a promising approach to predict power, area, and thermal behavior in 3D NoC systems.
-			\item This study focuses on developing a framework that utilizes machine learning models to predict power, area, and thermal characteristics by considering key parameters of NoC systems.
-		\end{itemize}
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+    \item Managing power, area, and thermal aspects in 3D Network-on-Chip (NoC) systems is a major challenge affecting system performance and reliability.
+    \item Traditional methods often fail to capture the complex relationships between these factors.
+    \item Machine learning offers a powerful solution by analyzing large datasets and identifying patterns to predict system behavior.
+    \item This study aims to develop a machine learning-based framework to predict power, area, and thermal characteristics using key NoC parameters.
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+\frametitle{Literature Survey : Q-Thermal: A Q-Learning-Based Thermal-Aware Routing Algorithm for 3-D Network On-Chips}
+
+\textbf{Authors:} Narges Shahabinejad, Hakem Beitollahi (\textbf{2020}) \\
+\textbf{Approach:} A Q-learning-based routing algorithm utilizing thermal information in a Q-table to manage routing decisions, optimizing thermal distribution by selecting paths with lower temperatures. \\
+\textbf{Performance Metrics:} Standard deviation of thermal distribution, Average latency, Number of thermal hotspots. \\
+\textbf{Results:} 
+\begin{itemize}
+    \item 28\% and 13\% improvement in thermal distribution standard deviation compared to TAAR and PTB3R.
+    \item 32\% improvement in average latency compared to existing methods.
+    \item 38\% reduction in thermal hotspots compared to TAAR and 54\% compared to PTB3R.
+\end{itemize}
+\textbf{Observations:} Optimizes thermal distribution and reduces hotspots in 3-D NoCs. \\
+\textbf{Limitations:} Slight increase in area and power consumption compared to previous routing techniques.
 \end{frame}
 
 \begin{frame}[fragile]
-\frametitle{Literature Survey : TTQR: A Traffic- and Thermal-Aware Q-Routing for 3D Network-on-Chip}
+\frametitle{TTQR: A Traffic- and Thermal-Aware Q-Routing for 3D Network-on-Chip}
 
 \textbf{Authors:} Hanyan Liu, Xiaowen Chen, Yunping Zhao, Chen Li, Jianzhuang Lu (\textbf{2022}) \\
 \textbf{Approach:} A Q-learning-based routing algorithm using two Q-tables: one for local traffic status and one for global thermal information. \\
@@ -62,22 +80,6 @@
     \item More balanced traffic load distribution across layers.
 \end{itemize}
 \textbf{Limitations:} Slightly higher average temperature compared to TAAR.
-\end{frame}
-
-\begin{frame}[fragile]
-\frametitle{Q-Thermal: A Q-Learning-Based Thermal-Aware Routing Algorithm for 3-D Network On-Chips}
-
-\textbf{Authors:} Narges Shahabinejad, Hakem Beitollahi (\textbf{2020}) \\
-\textbf{Approach:} A Q-learning-based routing algorithm utilizing thermal information in a Q-table to manage routing decisions, optimizing thermal distribution by selecting paths with lower temperatures. \\
-\textbf{Performance Metrics:} Standard deviation of thermal distribution, Average latency, Number of thermal hotspots. \\
-\textbf{Results:} 
-\begin{itemize}
-    \item 28\% and 13\% improvement in thermal distribution standard deviation compared to TAAR and PTB3R.
-    \item 32\% improvement in average latency compared to existing methods.
-    \item 38\% reduction in thermal hotspots compared to TAAR and 54\% compared to PTB3R.
-\end{itemize}
-\textbf{Observations:} Optimizes thermal distribution and reduces hotspots in 3-D NoCs. \\
-\textbf{Limitations:} Slight increase in area and power consumption compared to previous routing techniques.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -98,6 +100,26 @@
     \item Uses ANN to estimate temperatures in non-sensor-allocated nodes.
 \end{itemize}
 \textbf{Limitations:} Assumes spatial thermal correlations remain constant across applications, which may affect temperature reconstruction accuracy in some cases.
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{TTNNM: Thermal- and Traffic-Aware Neural Network Mapping on 3D-NoC-based Accelerator}
+
+\small
+\textbf{Authors:} Xinyi Li, Wenjie Fan, Heng Zhang, Jinlun Ji, Tong Cheng, Shiping Li, Li Li, Yuxiang Fu (\textbf{2024}) \\
+\textbf{Approach:} A neural network-based mapping technique that optimizes temperature distribution by strategically mapping NN layers based on their computational loads. \\
+\textbf{Performance Metrics:} Average Temperature, Temperature Variance, Maximum Temperature, Average Packet Latency. \\
+\textbf{Results:} Average Temperature: 68.3°C, Maximum Temperature: 77.2°C, Temperature Variance: 5.9°C², Packet Latency: 13.6 cycles. \\
+\textbf{Observations:} 
+\begin{itemize}
+    \item Reduces average temperature, temperature variance, and maximum temperature.
+    \item Results in a more uniform temperature distribution across the NoC, improving thermal management.
+\end{itemize}
+\textbf{Limitations:} 
+\begin{itemize}
+    \item Primarily focused on offline inference scenarios, with limited consideration for dynamic or runtime scenarios.
+\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -122,23 +144,22 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]
-\frametitle{TTNNM: Thermal- and Traffic-Aware Neural Network Mapping on 3D-NoC-based Accelerator}
+\begin{frame}
+\frametitle{LSTM-based Temperature Prediction and Hotspot Tracking for Thermal-aware 3D NoC System}
 
-\small
-\textbf{Authors:} Xinyi Li, Wenjie Fan, Heng Zhang, Jinlun Ji, Tong Cheng, Shiping Li, Li Li, Yuxiang Fu (\textbf{2024}) \\
-\textbf{Approach:} A neural network-based mapping technique that optimizes temperature distribution by strategically mapping NN layers based on their computational loads. \\
-\textbf{Performance Metrics:} Average Temperature, Temperature Variance, Maximum Temperature, Average Packet Latency. \\
-\textbf{Results:} Average Temperature: 68.3°C, Maximum Temperature: 77.2°C, Temperature Variance: 5.9°C², Packet Latency: 13.6 cycles. \\
-\textbf{Observations:} 
 \begin{itemize}
-    \item Reduces average temperature, temperature variance, and maximum temperature.
-    \item Results in a more uniform temperature distribution across the NoC, improving thermal management.
+    \item \textbf{Authors:} Tong Cheng, Haoyu Du, Li Li, Yuxiang Fu (2021)  
+    \item \textbf{Approach:} A Long Short-Term Memory (LSTM)-based model for temperature prediction that can work alongside Proactive Dynamic Thermal Management (PDTM).  
+    \item \textbf{Metrics Used:} Mean-Square-Error (MSE), Average Prediction Accuracy  
+    \item \textbf{Results:} 
+    \begin{itemize}
+        \item Mean-Square-Error = 0.411°C  
+        \item Average Prediction Accuracy improved by 41.92\% to 73.63\%  
+    \end{itemize}
+    \item \textbf{Observations:} The proposed method improves temperature prediction accuracy compared to traditional ARMA (Autoregressive Moving Average) models. Additionally, the model can quickly locate new hotspots within 0.075 ms.  
+    \item \textbf{Limitation:} The study is conducted on an 8×8×4 3D NoC system, but it is unclear how well the model scales to larger systems.
 \end{itemize}
-\textbf{Limitations:} 
-\begin{itemize}
-    \item Primarily focused on offline inference scenarios, with limited consideration for dynamic or runtime scenarios.
-\end{itemize}
+
 \end{frame}
 
 \begin{frame}
@@ -376,16 +397,14 @@ To predict power, area, and thermal (PAT) metrics in NoC systems using \textbf{A
 \begin{algorithm}[H]
 \caption{AdaBoost with Decision Tree Regressor}
 \begin{algorithmic}[1]
-\State \textbf{Initialize:} Set initial sample weights equally, set $T$ as the total number of iterations (Number of Decision Trees ).
+\State \textbf{Initialize:} Set initial sample weights equally, set $T$ as the total number of iterations (Number of Decision Trees).
 \For{each iteration $t = 1, 2, ..., T$}
-    \State \textbf{Train Weak Model:} Train a Decision Tree on the weighted data.
-    \State \textbf{Calculate Error:} Compute the error rate based on the predictions.
-    \State \textbf{Update Weights:} 
-    \If{A sample is misclassified} 
-        \State Increase its weight to emphasize it for the next iteration.
-    \Else
-        \State Decrease the weight for correctly classified samples.
-    \EndIf
+    \State \textbf{Train Model:} Train a Decision Tree Regressor on the weighted data.
+    \State \textbf{Calculate Error:} Compute the weighted error rate as the difference between actual and predicted values.
+    \For{each sample}
+        \State Increase the weight for samples with higher prediction error.
+        \State Decrease the weight for samples with lower prediction error.
+    \EndFor
     \State \textbf{Calculate Model Weight:} Assign a weight to the trained model based on its error rate.
 \EndFor
 \State \textbf{Final Prediction:} Combine the predictions of all models, weighted by their performance, to obtain the final prediction.
@@ -393,6 +412,7 @@ To predict power, area, and thermal (PAT) metrics in NoC systems using \textbf{A
 \end{algorithm}
 
 \end{frame}
+
 
 
 
