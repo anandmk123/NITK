@@ -29,8 +29,7 @@
 \begin{frame}[t]{Introduction}
     \begin{itemize}
         \item This project focuses on developing a \textbf{Conversational Used Car Price Predictor}, integrating a chatbot interface with a machine learning model.
-        \item \textbf{Goal:} To allow users to interact through natural conversation rather than filling out traditional forms to predict used car prices.
-        \item The chatbot will collect necessary car details (brand, model, year, mileage, etc.) step by step through an intuitive and engaging interface.
+\item The chatbot will collect necessary car details (brand, model, year, mileage, etc.) step by step through an interactive and engaging interface.
         \item A machine learning model will use the gathered data to predict the price of the used car, ensuring accurate and reliable predictions.
         \item The chatbot also handles additional queries, such as explaining how the price was calculated or what factors affect the car’s value.
     \end{itemize}
@@ -55,16 +54,16 @@
 
 \begin{frame}{Implementation of Random Forest for Price Prediction}
     \begin{itemize}
-        \item \textbf{Data Preprocessing:}
+        \item \textbf{Dataset and Preprocessing:}
         \begin{itemize}
+            \item Dataset sourced from Kaggle: \texttt{cardekho\_dataset} in 2023.
             \item Categorical features (\texttt{fuel\_type}, \texttt{transmission\_type}, \texttt{brand}, \texttt{model}) encoded using One-Hot Encoding.
-            \item Numerical features (e.g., \texttt{mileage}, \texttt{engine}, \texttt{year\_of\_manufacture}) normalized using \texttt{StandardScaler}.
         \end{itemize}
         
         \item \textbf{Model Building:}
         \begin{itemize}
             \item \textbf{Random Forest Regressor} used for price prediction.
-            \item Hyperparameter tuning with \texttt{RandomizedSearchCV} to optimize:
+            \item Hyperparameters tuned using \texttt{RandomizedSearchCV} for optimal performance:
             \begin{itemize}
                 \item \texttt{n\_estimators}: Number of trees in the forest.
                 \item \texttt{max\_depth}: Maximum depth of each tree, controlling tree complexity.
@@ -75,11 +74,14 @@
         
         \item \textbf{Model Evaluation:}
         \begin{itemize}
-            \item \textbf{R² Score:} 0.93, indicating strong model fit and that 93\% of the variance in car prices is explained.
-            \item \textbf{Mean Absolute Error (MAE):} 60,893.98, representing the average deviation from actual prices.
+            \item \textbf{R² Score:} 0.93, meaning the model can predict 93\% of the changes in car prices based on the provided features, indicating a high level of accuracy.
+            \item \textbf{Mean Absolute Error (MAE):} 6089.98, representing the average deviation from actual prices.
         \end{itemize}
     \end{itemize}
 \end{frame}
+
+
+
 
 \begin{frame}{Finding the Most Influential Feature using SHAP Values}
     \begin{itemize}
@@ -88,7 +90,6 @@
         \item The SHAP values quantify the impact of each feature, allowing us to identify which feature has the maximum influence on the predicted price.
         \item The feature with the highest SHAP value is considered the most influential in determining the car's price.
         \item The percentage contribution of this most influential feature is computed by dividing its SHAP value by the predicted price, giving an understanding of its relative importance.
-        \item This process helps to interpret the model’s decision-making by identifying the key factors driving the price prediction.
     \end{itemize}
 \end{frame}
 
@@ -272,21 +273,6 @@ Entities refer to the specific pieces of information that the chatbot extracts f
 		\item \textbf{Numeric Slots}: Checks ranges for km driven, mileage, engine capacity, max power, seats, and year of manufacture.
 		\item \textbf{Fuel Type \& Transmission}: Validates against allowed values like \texttt{petrol}, \texttt{diesel}, \texttt{automatic}, etc.
 	\end{itemize}
-\end{frame}
-
-\begin{frame}{Telegram Integration}
-	
-	\begin{itemize}
-		\item Rasa provides an API endpoint (default: \texttt{http://localhost:5005/webhooks/telegram/webhook}) to handle incoming messages.
-		\item The endpoint allows Rasa to receive and send messages to Telegram through webhooks.
-		\item Telegram bot integration:
-		\begin{itemize}
-			\item Create a bot using \texttt{BotFather} on Telegram and obtain a token.
-			\item Set the Telegram bot token in Rasa configuration \texttt{credentials.yml}.
-		\end{itemize}
-		\item Rasa listens to messages from users on Telegram, processes them, and sends back responses via the webhook.
-	\end{itemize}
-	
 \end{frame}
 
 

@@ -48,7 +48,7 @@ KNN,core_avg_temp_L1,0.219143689,0.20003481,0.783501386,Random Forest,Random For
 Linear Regression,core_avg_temp_L1,0.903735085,0.586467516,0.10717304,Random Forest,Random Forest,Random Forest
 SVR,core_avg_temp_L1,0.345991106,0.271953093,0.658185023,Random Forest,Random Forest,Random Forest
 AdaBoost with DecisionTree,core_avg_temp_L1,0.003392627,0.026744339,0.996648323,Random Forest,Random Forest,Random Forest
-AdaBoost with DecisionTree,layer_area,3.37E-32,2.77E-17,1,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,layer_area,2.12E-09,2.22E-06,0.999999998,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
 SVR,layer_area,0.0040874,0.056837568,0.996002822,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
 Decision Tree,layer_area,0.000288875,0.00251344,0.999717501,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
 KNN,layer_area,0.005700974,0.05935749,0.994424864,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
@@ -102,5 +102,5 @@ Linear Regression,total_area,0.102300546,0.240291886,0.899957559,AdaBoost with D
 KNN,total_area,0.005701011,0.059357609,0.994424829,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
 Random Forest,total_area,8.04E-05,0.002857551,0.999921341,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
 AdaBoost,total_area,0.033325567,0.146931974,0.967410036,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
-AdaBoost with DecisionTree,total_area,1.81E-10,6.88E-07,1,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
+AdaBoost with DecisionTree,total_area,1.81E-10,6.88E-07,0.9999,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
 Decision Tree,total_area,0.000288876,0.002513427,0.999717501,AdaBoost with DecisionTree,AdaBoost with DecisionTree,AdaBoost with DecisionTree
