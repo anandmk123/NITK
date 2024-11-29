@@ -1,0 +1,68 @@
+\documentclass[conference]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{tabularx} % Required for the table
+\usepackage{array}    % Required for custom column types
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{adjustbox} % To allow scaling of tables
+\usepackage{caption}
+\usepackage{stfloats}
+\usepackage{authblk}
+
+\begin{document}
+
+\title{Power, Area and Thermal Prediction in 3D Network-on-Chip using Machine Learning}
+
+\author{Abhijith C, Anand M K \\
+
+Department of Computer Science and Engineering \\ 
+	National Institute of Technology Karnataka (NITK) \\ 
+	Surathkal, India\\
+Email: \{abhijithc.242cs003, anandmk.242cs008\}@nitk.edu.in}
+
+
+\maketitle
+
+\begin{abstract}
+As multicore systems become more complex, efficient on-chip communication has become increasingly critical. Network-on-Chip (NoC) architectures provide a more effective solution compared to traditional communication systems, facilitating high-speed communication between multiple cores. However, in 3D NoCs, high power density due to the stacking of processing elements (PEs) leads to significant thermal issues, causing increased latency and performance degradation. Effective power, area, and thermal (PAT) prediction and management are essential to address these challenges. Existing studies using Machine Learning (ML) and Deep Learning (DL) techniques often focus independently on power or thermal optimization and consider only a limited number of routing algorithms, such as XY routing, restricting the potential for accurate PAT prediction. These studies also face scalability concerns and are constrained by the availability of quality datasets. To overcome these limitations, this work proposes an AdaBoost-based method with Decision Trees as base learners for predicting PAT metrics in NoC systems. AdaBoost enhances prediction accuracy by iteratively focusing on hard-to-predict instances, while Decision Trees effectively model non-linear relationships. The proposed model trains 50 decision trees, with each iteration emphasizing challenging samples, resulting in a robust aggregated prediction. The dataset for training and evaluation was generated using the PAT-Noxim simulator, modeling various NoC configurations. This approach demonstrates the potential to provide consistent and accurate PAT predictions, contributing to more efficient NoC design and management.
+\end{abstract}
+
+
+\section{INTRODUCTION}
+As multicore systems become more complex, efficient
+on-chip communication becomes increasingly important.
+Network-on-chip (NoC) architectures have appeared to be a
+better alternative to traditional communication systems within
+the chip. NoCs allow multiple cores and components on a chip
+to communicate more effectively and at higher speeds.
+3D NoC improves performance and reduces latency based
+on stacking processing elements (PEs). However, the power
+density of 3D NOC is high due to the large number of PE,
+which leads to various thermal issues. The thermal issues are
+one of the reasons for the increase in latency, which leads to
+performance degradation. Power and thermal issues are closely
+related, and power consumption will increase along with
+thermal issues. Efficient area management is another critical
+design challenge of NoC. Due to the stacking of significant
+NoC components, the chip’s overall size and cost increase.
+Therefore, the power, area, and thermal (PAT) management of
+NoC is essential. 
+
+Machine Learning (ML) and Deep Learning
+(DL) technologies are widely used to address these issues. Li \textit{et al.}\cite{7} proposed a Graph Neural Network (GNN) Framework for predicting the area, power, and performance of NoCs. The method models NoCs as attributed graphs and uses GNNs to learn patterns that affect PPA, such as traffic patterns and congestion. However, the proposed method demonstrates effective performance only up to a certain number of cores, and the model may struggle in larger systems. Cheng \textit{et al.}\cite{12} proposed a Long Short-Term Memory (LSTM) temperature prediction model for Proactive Dynamic Thermal Management (PDTM), which is a temperature control technique that highly depends on the accuracy of the model. However, the study is carried out on an 8×8×4 3D NoC, and it is unclear how well the model scales to larger systems.
+
+Most ML and DL models require a large volume of quality datasets for training; however, the availability of such datasets is limited in the area of PAT prediction for NoC. Additionally, most existing studies independently focus on power or thermal optimization, and studies on the simultaneous analysis of power, area, and thermal are rare. Scalability is another challenge, as many studies using ML or DL models have been tested in specific architectures or smaller systems, but their scalability to larger multi-core environments remains unclear. Furthermore, only a few types of ML/DL algorithms, such as reinforcement learning and artificial neural networks, have been explored in the context of NoC, while the application of other algorithms, such as convolutional neural networks (CNNs) and various regression algorithms, remains largely unexplored. Only a limited number of routing algorithms, such as XY routing, have been considered in existing studies, leaving other potentially effective algorithms unexplored.
+
+The proposed method involves using AdaBoost with Decision Tree for predicting power, area, and thermal metrics in NoC systems. The approach combines AdaBoost, an ensemble learning method, with Decision Trees as base learners to predict NoC system metrics. AdaBoost improves the prediction accuracy by focusing on hard-to-predict instances, refining model performance over multiple iterations. Decision Trees are chosen as base learners due to their simplicity and ability to model non-linear relationships effectively. This model works by training a series of 50 decision trees, each aimed at reducing the overall prediction error. Each round assigns higher weights to the samples that are hard to predict. The subsequent trees give more importance to those challenging cases. The final prediction is the aggregation of each tree, which overall makes a robust prediction model. The dataset for predicting power, area, and thermal metrics was generated using the PAT-Noxim simulator, which models NoC systems under various configurations and workloads.
+\begin{thebibliography}{00}
+
+\bibitem{7}
+F. Li, Y. Wang, C. Liu, H. Li, and X. Li, ``NoCeption: A Fast PPA Prediction Framework for Network-on-Chips Using Graph Neural Network,'' \emph{2022 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)}, Antwerp, Belgium, 2022, pp. 1035-1040, doi: 10.23919/DATE54114.2022.9774525.
+
+\bibitem{12}
+T. Cheng, H. Du, L. Li and Y. Fu, "LSTM-based Temperature Prediction and Hotspot Tracking for Thermal-aware 3D NoC System," 2021 18th International SoC Design Conference (ISOCC), Jeju Island, Korea, Republic of, 2021, pp. 286-287, doi: 10.1109/ISOCC53507.2021.9613862.
+
+\end{thebibliography}
+
+\end{document}
